@@ -1,0 +1,171 @@
+.full{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+.col{
+    margin: 20px;
+    height: 100vh;
+    width: 100%;
+}
+#left{
+    box-shadow:0 0 0 0 3px;
+}
+.input textarea{
+    padding: 20px;
+}
+
+#input{
+    width: 100%;
+}
+
+#output{
+    width: 100%;
+}
+
+.page-title{
+    border-radius: 15px;
+    margin: 30px;
+}
+.materi-box{
+    display: flex;
+    justify-content: center;
+}
+.materi{
+    width: 80%;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: left;
+}
+span:hover{
+    color: rgba(255, 27, 27, 0.916);
+}
+#content {
+    height: 2000px;
+}
+#progress-bar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: #4caf50;
+    display: none;
+}
+.parent-heading{
+    font-size: 18px;
+    cursor: pointer;
+}
+.daftarIsi{
+    width: 60%;
+    background-color: grey;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: left;
+}
+.daftarIsi a{
+    text-decoration: none;
+    color: black;
+}
+.lol{
+    position: relative;
+}
+.circle{
+    position: absolute;
+    left: 40%;
+    height: 125px;
+    width: 125px;
+    display: inline-block;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+}
+@keyframes rotate{
+    50%{
+        border-left-color: #ee4867 ;
+    }
+    75%{
+        border-left-color: #ee4867 ;
+    }
+    100%{
+        border-left-color: #ee4867;
+        transform: rotate(360deg);
+    }
+}
+.check-icon{
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 28px;
+    transform: scaleX(-1) rotate(135deg);
+    height: 56px;
+    width: 28px;
+    border-top: 4px solid #ee4867;
+    border-right: 4px solid #ee4867;
+    transform-origin: left top;
+    animation: check-icon 0.8s;
+}
+@keyframes check-icon {
+    0%{
+        opacity: 1;
+        height: 0;
+        width: 0;
+    }
+    20%{
+        height: 0;
+        width: 28px;
+        opacity: 1;
+    }
+    40%{
+        height: 56px;
+        width: 28px;
+        opacity: 1;
+    }
+    100%{
+        height: 56px;
+        width: 28px;
+        opacity: 1;
+    }
+}
+.cross {
+    position: relative;
+    width: 100px; /* Sesuaikan dengan kebutuhan */
+    height: 100px; /* Sesuaikan dengan kebutuhan */
+    animation: fadeInOutFromRight 1s ease-out;
+
+}
+
+.cross::before,
+.cross::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 4px; /* Lebar garis */
+    background-color: #ee4867; /* Warna garis */
+    top: 50%;
+    transform-origin: center;
+}
+
+.cross::before {
+    transform: rotate(45deg);
+}
+
+.cross::after {
+    transform: rotate(-45deg);
+}
+@keyframes fadeInOutFromRight {
+    0% {
+        opacity: 0;
+        width: 0;
+        transform: translateX(20px);
+    }
+    50% {
+        opacity: 1;
+        width: 50px;
+        transform: translateX(20px);
+    }
+    100% {
+        opacity: 1;
+        width: 100px;
+        transform: translateX(0px);
+    }
+}
