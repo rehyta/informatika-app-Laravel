@@ -11,6 +11,7 @@ class Exercise extends Model
     protected $fillable = [
         'input',
         'output',
+        'compiler_result',
     ];
     // Pada model Course
     public function course()

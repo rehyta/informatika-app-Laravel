@@ -16,6 +16,7 @@ return new class extends Migration
             $table->foreignId('course_id')->constrained()->references('id')->on('courses')->onDelete('cascade');;
             $table->text('input');
             $table->text('output')->nullable();
+            $table->text('compiler_result')->nullable();
             $table->timestamps();
         });
     }

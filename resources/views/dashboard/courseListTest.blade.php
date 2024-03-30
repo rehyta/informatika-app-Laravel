@@ -1,6 +1,6 @@
 @extends('layout.main')
 
-@section ('container')
+@section ('content')
 <h2 class="text-center m-3">Daftar Isi</h2>
 
 <div class="d-flex justify-content-center align-items-center">

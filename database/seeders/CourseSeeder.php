@@ -15,7 +15,7 @@ class CourseSeeder extends Seeder
     public function run(): void
     {
         Course::create([
-            'title' => "Pengenalan Pemrograman",
+            'title' => "Pengenalan Bahasa Pemrograman",
             'description' => "test",
             'slug' => Str::slug("Pengenalan Pemrograman")
         ]);
@@ -28,6 +28,16 @@ class CourseSeeder extends Seeder
             'title' => "Variable dan Tipe Data",
             'description' => "test",
             'slug' => Str::slug("Variable dan Tipe Data")
+        ]);
+        Course::create([
+            'title' => "Operator dan Aritmatika",
+            'description' => "test",
+            'slug' => Str::slug("Operator dan Aritmatika")
+        ]);
+        Course::create([
+            'title' => "Kondisi dan Percabangan",
+            'description' => "test",
+            'slug' => Str::slug("Kondisi dan Percabangan")
         ]);
     }
 }

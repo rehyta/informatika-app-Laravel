@@ -14,7 +14,7 @@ class DashboardController extends Controller
         // Transform the data structure
         $coursesData = collect($courses)->map(function ($item) {
             return [
-                'Materi' => $item->material->slug, // Adjust this based on your actual data structure
+                'Materi' => $item->title, // Adjust this based on your actual data structure
             ];
         })->all();
         return view('dashboard.courselistTest', [

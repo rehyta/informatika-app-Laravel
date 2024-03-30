@@ -15,23 +15,5 @@ class PercobaanController extends Controller
             'title' => 'Percobaan',
         ]);
     }
-    public function percobaanCourseList()
-    {
-        return view('percobaan.courseList', [
-            'title' => 'Percobaan',
-        ]);
-    }
-    public function percobaan2()
-    {
-        return view('percobaan.percobaan2', [
-            'title' => 'percobaan Live Code',
-        ]);
-    }
-    public function daftarisi()
-    {
-        return view('percobaan.daftarisi', [
-            'title' => 'percobaan Daftar Isi',
-        ]);
-    }
 
 }
