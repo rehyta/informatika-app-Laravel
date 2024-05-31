@@ -16,6 +16,8 @@ return new class extends Migration
             $table->string('title')->nullable();
             $table->string('slug')->unique();
             $table->longText('content')->nullable();
+            $table->longText('prompt')->nullable();
+            $table->longText('soal');
             // $table->unsignedBigInteger('course_id');
             // $table->foreign('course_id')->references('id')->on('courses');
             $table->foreignId('course_id')->constrained('courses')->onDelete('cascade');

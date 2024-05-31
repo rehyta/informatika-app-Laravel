@@ -5,25 +5,16 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Material extends Model
+class Instruction extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'title',
-        'content',
-        'prompt',
         'soal',
-        'slug'
+        'jawaban'
     ];
-    // Pada model Material
+
     public function courses()
     {
         return $this->belongsTo(Course::class);
     }
-
-    // public function users()
-    // {
-    //     return $this->belongsToMany(User::class)->withPivot('is_read')->withTimestamps();
-    // }
-
 }

@@ -5,34 +5,30 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use App\Models\Course;
 use Illuminate\Http\Request;
+use App\Models\Material;
+use App\Models\Exercise;
 
 class DashboardController extends Controller
 {
-    public function get_course_all()
+    public function home()
     {
-        $courses = Course::with('material')->get();
-        // Transform the data structure
-        $coursesData = collect($courses)->map(function ($item) {
-            return [
-                'Materi' => $item->title, // Adjust this based on your actual data structure
-            ];
-        })->all();
-        return view('dashboard.courselistTest', [
-            'title' => 'Course List',
-            ...compact('coursesData')
+        return view('dashboard.home', [
+            'title' => 'Home',
         ]);
     }
-    public function dashboard()
+    public function courses()
     {
-        return view('dashboard.index', [
-            'title' => 'Dashboard',
-        ]);
-    }
 
-    public function courseList()
+        return view('dashboard.courses', [
+            'title' => 'Course list',
+            'courses' => Course::all(),
+            'materials'=>Material::all()
+        ]);
+    }
+    public function about()
     {
-        return view('dashboard.courseList', [
-            'title' => 'Course List',
+        return view('dashboard.about', [
+            'title' => 'About',
         ]);
     }
 }

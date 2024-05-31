@@ -17,7 +17,9 @@ class MaterialSeeder extends Seeder
         Material::create([
             'course_id' => 1,
             'title' => 'Perkenalan bahasa pemrograman',
-            'slug' => Str::slug("Pengenalan bahasa Pemrograman"),
+            'prompt' => "kita akan mengenali apa itu bahasa pemrograman",
+            'soal'=>'',
+            'slug'=> 'perkenalan-bahasa-pemrograman',
             'content' => '<div style="font-size: 16px">
             <p>Di era ini, pemrograman sudah menjadi kebutuhan dasar di dunia industri. Di zaman yang apa-apa sudah serba otomatis, pemrograman adalah keterampilan yang sangat berharga. </p>
             <p>Tenang saja, ngoding tidak serumit yang kamu lihat di TV atau media <i>maenstream,</i> semua orang bisa ngoding kok...</p>
@@ -98,155 +100,210 @@ class MaterialSeeder extends Seeder
                     pengembangan perangkat lunak juga meningkat dengan penguasaan C++. selain itu, C++ banyak digunakan dalam pengembangan game, sistem operasi, 
                     dan aplikasi berkinerja tinggi. oleh karena itu, belajar C++ dapat membuka pintu untuk berbagai peluang pengembangan dan mendukung kemajuan karir di dunia pemrograman.
                 </p>
-            </div>'
+            </div>',
         ]);
+
+
 
         Material::create([
             'course_id' => 2,
             'title' => 'Struktur Data C++',
-            'slug' => Str::slug("Struktur Data C++"),
-            'content' => '<div style="font-size: 16px">
-            <p>Pada dasarnya, semua bahasa pemrograman itu sama saja. ada variable, operasi, loop, dll. namun, aturan penulisan (syntax) setiap bahasa
-                pemrograman itu berbeda.
-            </p>
-            </div>
-            <div style="font-size: 16px">
-                <p>
-                    Dalam pemrograman C++, ada 3 unsur paling dasar dan sederhana yang terdiri dari : <br>
-                    <br>1. Bagian Include <br>
-                    <br>
-                    2. Bagian Namespace <br>
-                    <br>
-                    3. Bagian fungsi <br> 
-                </p> 
-                <div class="contohbox bg-secondary p-1" style="border-radius: 15px">
-                    <h5 class="mx-5 my-2">Contohnya seperti ini :</h5>
-                    <div class="box m-5 bg-light" >
-                        <pre>
-                            #include < iostream >
-                            
-                            using namespace std;
-                                        
-                            int main(){
-                                cout << "Hello world!" << endl;
-                                return 0;
-                            }
-                        </pre>
-                    </div>
-                </div>
-                <p>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item"><b> Bagian Include</b> Bagian ini mendefinisikan <i>library</i> apa saja yang akan digunakan dalam program. 
-                        pada contoh diatas, kita menggunakan library <mark>iostream</mark> (baris ke 1). library ini berisi fungsi-fungsi <mark> cout dan cin </mark> yang akan berguna
-                        untuk melakukan input dan output.</li>
-                        <li class="list-group-item"><b> Bagian Namespace</b> Bagian ini sebenarnya tidak wajib. Pada contoh diatas, kita menggunakan <mark> namespace std </mark> karena fungsi-fungsi <i>iostream</i> dibungkus dalam namespace std <br>
-                        apabila kita tidak menggunakan namespace std, maka untuk menggunakan fungsi <mark> cout dan cin </mark> yang tersedia dalam <i>iostream</i> harus diawali dengan <mark> std:: </mark><br>
-                        <div class="contohbox bg-secondary p-1" style="border-radius: 15px">
-                            <h5 class="mx-5 my-2">Contohnya seperti ini :</h5>
-                            <div class="box m-5 bg-light" >
-                                <pre>
-                                    #include < iostream >
-                                        
-                                    int main(){
-                                    std::cout << "Hello world!" << endl;
-                                    return 0;
+            'prompt' => "kita akan mempelajari bagaimana struktur dasar C++",
+            'soal'=>'
+                <p> Seperti program "hello world",
+                    <div class="contohbox border m-3" style="border-radius: 15px">
+                        <div class="box m-1 bg-light" >
+                            <pre>
+                                #include <iostream>
+                                    using namespace std;
+                                    
+                                    int main() {
+                                        cout << "Hello World!";
+                                        return 0;
                                     }
-                                </pre>
-                            </div>
+                            </pre>
                         </div>
+                    </div>
+                    Buatlah program di kotak input dengan code yang akan menghasilkan output :
+                    <div class="contohbox border m-3" style="border-radius: 15px">
+                        <div class="box m-1 bg-light" >
+                            <pre>
+                                saya sedang belajar informatika
+                                saya belajar dasar pemrograman
+                            </pre>
+                        </div>
+                    </div>
+                    setelah menulis kode, klik tombol <b>RUN</b> yang ada diatas kotak input untuk 
+                    menjalankan kode anda dan lihatlah hasil yang muncul di kotak output
+                </p>
+             ',
+            'slug' => 'struktur-data-c++',
+            'content' => '<div style="font-size: 16px">
+                <p>Pada dasarnya, semua bahasa pemrograman itu sama saja. ada variable, operasi, loop, dll. namun, aturan penulisan (syntax) setiap bahasa
+                    pemrograman itu berbeda.
+                </p>
+                </div>
+                <div style="font-size: 16px">
+                    <p>
+                        Dalam pemrograman C++, ada 3 unsur paling dasar dan sederhana yang terdiri dari : <br>
+                        <br>1. Bagian Include <br>
                         <br>
-                        Jika tidak mau menggunakan <mark>std::</mark> terus menerus, maka gunakanlah <mark>std</mark> di <i>namespace</i></li>
-                        <li class="list-group-item"><b>Bagian fungsi</b> Bagian ini adalah bagian utama yang bersifat wajib. ini adalah bagian terpenting. disinilah kita akan menulis kode program.
-                        <br> pada contoh diatas, kita menggunakan fungsi <u>main.</u>
-                        fungsi <mark>main()</mark> adalah fungsi yang akan dieksekusi pertama saat program dibuka. selain fungsi <mark>main()</mark> kita bisa membuat fungsi lain.<br>
-                        <div class="contohbox bg-secondary p-1" style="border-radius: 15px">
-                            <h5 class="mx-5 my-2">Contohnya seperti ini :</h5>
-                            <div class="box m-5 bg-light" >
-                                <pre>
-                                    #include < iostream >
-                                        using namespace std;
-                                        
+                        2. Bagian Namespace <br>
+                        <br>
+                        3. Bagian fungsi <br> 
+                    </p> 
+                    <div class="contohbox bg-secondary p-1" style="border-radius: 15px">
+                        <h5 class="mx-5 my-2">Contohnya seperti ini :</h5>
+                        <div class="box m-5 bg-light" >
+                            <pre>
+                                #include < iostream >
+                                
+                                using namespace std;
+                                            
+                                int main(){
+                                    cout << "Hello world!" << endl;
+                                    return 0;
+                                }
+                            </pre>
+                        </div>
+                    </div>
+                    <p>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><b> Bagian Include</b> Bagian ini mendefinisikan <i>library</i> apa saja yang akan digunakan dalam program. 
+                            pada contoh diatas, kita menggunakan library <mark>iostream</mark> (baris ke 1). library ini berisi fungsi-fungsi <mark> cout dan cin </mark> yang akan berguna
+                            untuk melakukan input dan output.</li>
+                            <li class="list-group-item"><b> Bagian Namespace</b> Bagian ini sebenarnya tidak wajib. Pada contoh diatas, kita menggunakan <mark> namespace std </mark> karena fungsi-fungsi <i>iostream</i> dibungkus dalam namespace std <br>
+                            apabila kita tidak menggunakan namespace std, maka untuk menggunakan fungsi <mark> cout dan cin </mark> yang tersedia dalam <i>iostream</i> harus diawali dengan <mark> std:: </mark><br>
+                            <div class="contohbox bg-secondary p-1" style="border-radius: 15px">
+                                <h5 class="mx-5 my-2">Contohnya seperti ini :</h5>
+                                <div class="box m-5 bg-light" >
+                                    <pre>
+                                        #include < iostream >
+                                            
                                         int main(){
-                                        cout << "Hello world!" << endl;
+                                        std::cout << "Hello world!" << endl;
                                         return 0;
                                         }
-                                        
-                                        void hai(){
-                                        cout << "Hello apa kabar?" << endl;
-                                        }
-                                </pre>
+                                    </pre>
+                                </div>
                             </div>
+                            <br>
+                            Jika tidak mau menggunakan <mark>std::</mark> terus menerus, maka gunakanlah <mark>std</mark> di <i>namespace</i></li>
+                            <li class="list-group-item"><b>Bagian fungsi</b> Bagian ini adalah bagian utama yang bersifat wajib. ini adalah bagian terpenting. disinilah kita akan menulis kode program.
+                            <br> pada contoh diatas, kita menggunakan fungsi <u>main.</u>
+                            fungsi <mark>main()</mark> adalah fungsi yang akan dieksekusi pertama saat program dibuka. selain fungsi <mark>main()</mark> kita bisa membuat fungsi lain.<br>
+                            <div class="contohbox bg-secondary p-1" style="border-radius: 15px">
+                                <h5 class="mx-5 my-2">Contohnya seperti ini :</h5>
+                                <div class="box m-5 bg-light" >
+                                    <pre>
+                                        #include < iostream >
+                                            using namespace std;
+                                            
+                                            int main(){
+                                            cout << "Hello world!" << endl;
+                                            return 0;
+                                            }
+                                            
+                                            void hai(){
+                                            cout << "Hello apa kabar?" << endl;
+                                            }
+                                    </pre>
+                                </div>
+                            </div>
+                            </li>
+                        </ul>
+                    </p>
+                </div>
+                
+                <div class="mt-3" style="font-size: 16px"> 
+                    <h2 style="font-size: 20">PENULISAN STATEMENT DAN KONDISI</h2>
+                    <p>Statement dan kondisi adalah kumpulan kode yang ditulis dalam bagian fungsi</p>
+                    <div class="contohbox bg-secondary p-1" style="border-radius: 15px">
+                        <h5 class="mx-5 my-2">Contohnya seperti ini :</h5>
+                        <div class="box m-5 bg-light" >
+                            <pre>
+                                #include < iostream >
+                                    using namespace std;
+                                    
+                                    int main(){
+                                    cout << "Hello world!" << endl;
+                                    cout << "Hari ini saya belajar c++" << endl;
+                                    cout << "Belajar C++ itu mudah";
+                                    return 0;
+                                    }
+                            </pre>
                         </div>
-                        </li>
-                    </ul>
-                </p>
-            </div>
-            
-            <div class="mt-3" style="font-size: 16px"> 
-                <h2 style="font-size: 20">PENULISAN STATEMENT DAN KONDISI</h2>
-                <p>Statement dan kondisi adalah kumpulan kode yang ditulis dalam bagian fungsi</p>
-                <div class="contohbox bg-secondary p-1" style="border-radius: 15px">
-                    <h5 class="mx-5 my-2">Contohnya seperti ini :</h5>
-                    <div class="box m-5 bg-light" >
-                        <pre>
-                            #include < iostream >
-                                using namespace std;
-                                
-                                int main(){
-                                   cout << "Hello world!" << endl;
-                                   cout << "Hari ini saya belajar c++" << endl;
-                                   cout << "Belajar C++ itu mudah";
-                                   return 0;
-                                }
-                        </pre>
                     </div>
                 </div>
-            </div>
-            
-            <div class="mt-3" style="font-size: 16px"> 
-                <h2 style="font-size: 20">PENULISAN KOMENTAR</h2>
-                <p>Komentar adalah bagian kode yang akan diabaikan dalam eksekusi. Ada dua cara menulis komentar dalam C++ : <br>
-                1. menggunakan garis miring double (//) ini digunakan untuk memberikan komentar yang cuma sebaris</p>
-                <div class="contohbox bg-secondary p-1" style="border-radius: 15px">
-                    <h5 class="mx-5 my-2">Contohnya seperti ini :</h5>
-                    <div class="box m-5 bg-light" >
-                        <pre>
-                            #include < iostream >
-                                using namespace std;
-                                //ini adalah komentar satu baris
-                                int main(){
-                                   cout << "Hello world!" << endl;
-                                   return 0;
-                                }
-                        </pre>
+                
+                <div class="mt-3" style="font-size: 16px"> 
+                    <h2 style="font-size: 20">PENULISAN KOMENTAR</h2>
+                    <p>Komentar adalah bagian kode yang akan diabaikan dalam eksekusi. Ada dua cara menulis komentar dalam C++ : <br>
+                    1. menggunakan garis miring double (//) ini digunakan untuk memberikan komentar yang cuma sebaris</p>
+                    <div class="contohbox bg-secondary p-1" style="border-radius: 15px">
+                        <h5 class="mx-5 my-2">Contohnya seperti ini :</h5>
+                        <div class="box m-5 bg-light" >
+                            <pre>
+                                #include < iostream >
+                                    using namespace std;
+                                    //ini adalah komentar satu baris
+                                    int main(){
+                                    cout << "Hello world!" << endl;
+                                    return 0;
+                                    }
+                            </pre>
+                        </div>
                     </div>
-                </div>
-                2. menggunakan garis miring bintang (/**/) ini digunakan untuk memberikan komentar yang lebih dari sebaris</p>
-                <div class="contohbox bg-secondary p-1" style="border-radius: 15px">
-                    <h5 class="mx-5 my-2">Contohnya seperti ini :</h5>
-                    <div class="box m-5 bg-light" >
-                        <pre>
-                            #include < iostream >
-                                using namespace std;
-            
-                                /*saya membuat komentar yang lebih dari sebaris
-                                setelah ini, saya akan membuat program sederhana 
-                                menggunakan cout di dalam library iostream*/
-            
-                                int main(){
-                                   cout << "Hello world!" << endl;
-                                   return 0;
-                                }
-                        </pre>
+                    2. menggunakan garis miring bintang (/**/) ini digunakan untuk memberikan komentar yang lebih dari sebaris</p>
+                    <div class="contohbox bg-secondary p-1" style="border-radius: 15px">
+                        <h5 class="mx-5 my-2">Contohnya seperti ini :</h5>
+                        <div class="box m-5 bg-light" >
+                            <pre>
+                                #include < iostream >
+                                    using namespace std;
+                
+                                    /*saya membuat komentar yang lebih dari sebaris
+                                    setelah ini, saya akan membuat program sederhana 
+                                    menggunakan cout di dalam library iostream*/
+                
+                                    int main(){
+                                    cout << "Hello world!" << endl;
+                                    return 0;
+                                    }
+                            </pre>
+                        </div>
                     </div>
-                </div>
-            </div>'
+                </div>'
         ]);
+
+
 
         Material::create([
             'course_id' => 3,
             'title' => 'Variable dan Tipe Data',
-            'slug'=> Str::slug("Variable dan Tipe Data"),
+            'prompt' => "kita akan mempelajari bagaimana membuat variable menyesuaikan tipe data dalam bahasa pemrograman",
+            'soal'=>'
+                <p> Buatlah program dengan variable ketentuan seperti :
+                    <div class="contohbox border" style="border-radius: 15px">
+                        <div class="box m-5 bg-light" >
+                            <pre>
+                                nama : Suwarno
+                                pekerjaan : petani
+                                lama bekerja : 12 tahun
+                            </pre>
+                        </div>
+                    </div>
+                    Buatlah output menjadi :
+                    <div class="contohbox border" style="border-radius: 15px">
+                        <div class="box m-5 bg-light" >
+                            <pre>
+                                "Nama beliau Pak Suwarno. 
+                                Beliau bekerja sebagai petani selama 12 tahun."
+                            </pre>
+                        </div>
+                    </div>
+                </p>',
+            'slug' => 'variable-dan-tipe-data',
             'content' => '<div class="container md-4 m-3">
             <div class="opening">
                 <h2 style="font-size: 32px">Variable dan Tipe Data</h2>
@@ -397,10 +454,45 @@ class MaterialSeeder extends Seeder
             </div>'
         ]);
 
+
+
         Material::create([
             'course_id' => 4,
             'title' => 'Operator dan Aritmatika',
-            'slug'=> Str::slug("Operator dan Aritmatika"),
+            'prompt' => "kita akan mempelajari bagaimana penggunaan operator dan aritmatika dalam bahasa pemrograman",
+            'soal'=>'
+                <p> Seperti program dengan ketentuan :
+                    <div class="contohbox border" style="border-radius: 15px">
+                        <div class="box m-5 bg-light" >
+                            <p>
+                                jarak rumah ke sekolah = 12 KM <br>
+                                waktu tempuh = 30 menit
+                            </p>
+                        </div>
+                    </div>
+                    Buatlah program dengan hasil output berupa kecepatannya!
+                    <div class="contohbox border" style="border-radius: 15px">
+                        <div class="box m-5 bg-light" >
+                            <p>
+                                #include _______________
+                                #include <string>  // Untuk menggunakan std::string
+                                using namespace std;
+                                
+                                int main() {
+                                    ___ jarak = ___;
+                                    ___ waktu = ___;
+                                
+                                    // Menampilkan informasi
+                                    cout << "Kecepatan: " << _______________ << " km/jam" << endl;
+                                
+                                    return 0;
+                                }
+                                
+                            </p>
+                        </div>
+                    </div>
+                </p>',
+            'slug' => 'operator-dan-aritmatika',
             'content' =>'
                     <div class="container md-4 m-3">
                     <div class="opening">
@@ -728,154 +820,155 @@ class MaterialSeeder extends Seeder
                 </div>'
         ]);
 
+
+
         Material::create([
             'course_id' => 5,
             'title' => 'Kondisi dan Percabangan',
-            'slug'=> Str::slug("Kondisi dan Percabangan"),
-            'content' =>'
-                        <div class="opening">
-                            <h2 style="font-size: 32px">Kondisi</h2>
-                            <p>Kita sudah belajar bagaimana mengoperasikan variable. Sekarang, bagaimana cara menerapkannya itu dalam kondisi tertentu?
-                            </p>
-                        </div>
-                        
-                            <div style="font-size: 16px">
-                            <p>
-                                Ketika kita dihadapkan dengan pengambilan suatu keputusan, tentunya kita harus evaluasi terlebih dahulu pilihan-pilihan yang ada menyesuaikan kondisi.
-                                di dalam bahasa pemrograman, pengambilan keputusan juga bisa menggunakan penerapan konsep <i>if-else.</i> konsep ini berlaku pada hampir
-                                semua bahasa pemrograman.</p>
-                            <p>
-                                Untuk itu pada bagian kondisi, kita akan mempelajari percabangan yang terdiri atas 3 bagian, yaitu :</p>
-                            <p>
-                                <ul class="list-group list-group-flush">
-                                <li class="list-group-item"><b style="font-size: 20px">IF</b>
-                                <p>
-                                    <br>
-                                    IF bisa dianologikan seperti "jika memenuhi kondisi, lakukan A. jika tidak, tidak ada apa-apa". coba perhatikan
-                                    contoh dibawah ini :
-                                    <br>
-                                    <div class="contohbox border" style="border-radius: 15px">
-                                        <div class="box m-5 bg-light" >
-                                            <pre>
-                                                #include <iostream>
-                                                    using namespace std;
-                                                    
-                                                    int main() {
-                                                        int i = 7;
-                                                        if (i = 7){
-                                                        cout << "ini adalah angka tujuh";
-                                                        return 0;
-                                                        }
-                                                    }
-                                            </pre>
-                                        </div>
-                                    </div>
-                                    <br>
-                                    Jika dijalankan, program itu akan menghasilkan output :
-                                    <div class="contohbox border" style="border-radius: 15px">
-                                        <div class="box m-5 bg-light" >
-                                            <pre>
-                                                ini adalah angka tujuh
-                                            </pre>
-                                        </div>
-                                    </div>
-                                </p>
-                                </li>
-                                <li class="list-group-item"><b style="font-size: 20px">IF-ELSE</b>
-                                    <p>
-                                        IF-ELSE bisa dianologikan dengan "jika memenuhi kondisi, lakukan A. jika tidak, lakukan B"
-                                        <br>
-                                        Jika di buat dalam kode C++, kondisi ini bisa dibuat menjadi : <br>
-                                        <div class="contohbox border" style="border-radius: 15px">
-                                            <div class="box m-5 bg-light" >
-                                                <pre>
-                                                    #include <iostream>
-                                                        using namespace std;
-                                                        
-                                                        int main() {
-                                                            int i = 5;
-                                                            
-                                                            if (i == 7){
-                                                                cout << "ini adalah angka tujuh";
-                                                            }else{
-                                                                cout<< "ini bukan angka lima";
-                                                            }
-                                                            return 0;
-                                                        }
-                                                </pre>
-                                            </div>
-                                        </div>
-                                        <br>
-                                        Jika dijalankan, program itu akan menghasilkan output :
-                                        <div class="contohbox border" style="border-radius: 15px">
-                                            <div class="box m-5 bg-light" >
-                                                <pre>
-                                                    ini bukan angka lima
-                                                </pre>
-                                            </div>
-                                        </div>
-                                    </p>
-                                </li>
-                                <li class="list-group-item"><b style="font-size: 20px">IF...ELSE IF...ELSE</b>
-                                    <p>
-                                        Penerapan konstruksi ini, dapat direpresentasikan seperti "jika sesuatu 
-                                        memenuhi kondisi, lakukan A. jika tidak, lakukan pengecekan. apabila sesuati 
-                                        dengan kondisi B, lakukan B. jika tidak sama sekali, lakukan C"
-                                        <br>
-                                        jika dibuat dalam bentuk kode C++, kondisi ini bisa dibuat menjadi :
-                                        <br>
-                                        <p>
-                                            IF-ELSE bisa dianologikan dengan "jika memenuhi kondisi, lakukan A. jika tidak, lakukan B"
-                                            <br>
-                                            Jika di buat dalam kode C++, kondisi ini bisa dibuat menjadi : <br>
-                                            <div class="contohbox border" style="border-radius: 15px">
-                                                <div class="box m-5 bg-light" >
-                                                    <pre>
-                                                        #include <iostream>
-                                                            using namespace std;
-                                                            
-                                                            int main() {
-                                                                int i = 5;
-                                                                
-                                                                if (i == 3){
-                                                                    cout << "ini adalah angka tujuh";
-                                                                }else if (i > 5){
-                                                                    cout<< "angka ini lebih besar dari lima";
-                                                                }else{
-                                                                    cout<<"angka ini lebih kecil dari lima";
-                                                                }
-                                                                return 0;
-                                                            }
-                                                    </pre>
-                                                </div>
-                                            </div>
-                                            <br>
-                                            Jika dijalankan, program itu akan menghasilkan output :
-                                            <div class="contohbox border" style="border-radius: 15px">
-                                                <div class="box m-5 bg-light" >
-                                                    <pre>
-                                                        angka ini lebih kecil dari lima
-                                                    </pre>
-                                                </div>
-                                            </div>
+            'prompt' => "kita akan mempelajari bagaimana menerapkan kondisi dan percabangan dalam program",
+            'soal'=>'<p> Andi mendapat nilai 73 dalam ujiannya. Sementara, 
+                    Syarat kelulusan adalah nilai yang diperoleh Andi harus lebih besar atau sama dengan 60.
+
+                    Buatlah program sederhana dalam bahasa pemrograman C++ untuk membantu Andi menentukan apakah 
+                    dia lulus atau tidak. Program harus menampilkan pesan "Anda lulus!" jika nilai lebih besar atau 
+                    sama dengan nilai KKM, atau pesan "Anda tidak lulus." jika nilai kurang dari KKM.
+                    <div class="contohbox border" style="border-radius: 15px">
+                        <div class="box m-5 bg-light" >
+                            <pre>
+                                #include <iostream>
+                                    using _______________;
                                     
-                                    </p>
-                                </li>
-                            </ul>
-                            </div>
-                        
-                            <div class="contoh"></div>
-                        
-                            <div class="tugas"></div>
-                        
-                            <form action="/course-5/livecode">
-                                <p>Bagaimana jika kita mencobanya? klik tombol <b>Next</b> untuk lanjut ke bagian berikutnya</p>
-                                <div class="d-grid gap-2 d-md-flex">
-                                    <button class="btn btn-primary me-md-2 bg-danger" id="nextSection" type="submit">NEXT</button>
-                                </div>
-                            </form>
+                                    int main() {
+                                        // Deklarasi variabel
+                                        ___ nilaiUjian = _______________
+                                    
+                                        // Menentukan apakah Andi lulus atau tidak
+                                        if (nilaiUjian _______________) {
+                                            cout << "Anda lulus!" << endl;
+                                        } _______________ {
+                                            cout << "Anda tidak lulus.";
+                                        }
+                                    
+                                        return 0;
+                                    }
+                                    
+                            </pre>
                         </div>
-                        '
+                    </div>
+                </p>',
+            'slug' => 'kondisi-dan-percabangan-opening',
+            'content' =>' <p> Ketika kita dihadapkan dengan pengambilan suatu keputusan, tentunya kita harus evaluasi terlebih dahulu pilihan-pilihan yang ada menyesuaikan kondisi.
+            di dalam bahasa pemrograman, pengambilan keputusan juga bisa menggunakan penerapan konsep <i>if-else.</i> konsep ini berlaku pada hampir
+            semua bahasa pemrograman.</p>
+            <b style="font-size: 20px">IF</b>
+                        <p>
+                            <br>
+                            IF bisa dianologikan seperti "jika memenuhi kondisi, lakukan A. jika tidak, tidak ada apa-apa". coba perhatikan
+                            contoh dibawah ini :
+                            <br>
+                            <div class="contohbox border" style="border-radius: 15px">
+                                <div class="box m-5 bg-light" >
+                                    <pre>
+                                        #include <iostream>
+                                            using namespace std;
+                                            
+                                            int main() {
+                                                int i = 7;
+                                                if (i = 7){
+                                                cout << "ini adalah angka tujuh";
+                                                return 0;
+                                                }
+                                            }
+                                    </pre>
+                                </div>
+                            </div>
+                            <br>
+                            Jika dijalankan, program itu akan menghasilkan output :
+                            <div class="contohbox border" style="border-radius: 15px">
+                                <div class="box m-5 bg-light" >
+                                    <pre>
+                                        ini adalah angka tujuh
+                                    </pre>
+                                </div>
+                            </div>
+                        </p>
+                                    
+                        <p>IF-ELSE bisa dianologikan dengan "jika memenuhi kondisi, lakukan A. jika tidak, lakukan B"
+                        <br>
+                        Jika di buat dalam kode C++, kondisi ini bisa dibuat menjadi : <br>
+                        <div class="contohbox border" style="border-radius: 15px">
+                            <div class="box m-5 bg-light" >
+                                <pre>
+                                    #include <iostream>
+                                        using namespace std;
+                                        
+                                        int main() {
+                                            int i = 5;
+                                            
+                                            if (i == 7){
+                                                cout << "ini adalah angka tujuh";
+                                            }else{
+                                                cout<< "ini bukan angka lima";
+                                            }
+                                            return 0;
+                                        }
+                                </pre>
+                            </div>
+                        </div>
+                        <br>
+                        Jika dijalankan, program itu akan menghasilkan output :
+                        <div class="contohbox border" style="border-radius: 15px">
+                            <div class="box m-5 bg-light" >
+                                <pre>
+                                    ini bukan angka lima
+                                </pre>
+                            </div>
+                        </div>
+                    </p>
+                    <b style="font-size: 20px">IF...ELSE IF...ELSE</b>
+                    <p>
+                        Penerapan konstruksi ini, dapat direpresentasikan seperti "jika sesuatu 
+                        memenuhi kondisi, lakukan A. jika tidak, lakukan pengecekan. apabila sesuati 
+                        dengan kondisi B, lakukan B. jika tidak sama sekali, lakukan C"
+                        <br>
+                        jika dibuat dalam bentuk kode C++, kondisi ini bisa dibuat menjadi :
+                        <br>
+                        <p>
+                            IF-ELSE bisa dianologikan dengan "jika memenuhi kondisi, lakukan A. jika tidak, lakukan B"
+                            <br>
+                            Jika di buat dalam kode C++, kondisi ini bisa dibuat menjadi : <br>
+                            <div class="contohbox border" style="border-radius: 15px">
+                                <div class="box m-5 bg-light" >
+                                    <pre>
+                                        #include <iostream>
+                                            using namespace std;
+                                            
+                                            int main() {
+                                                int i = 5;
+                                                
+                                                if (i == 3){
+                                                    cout << "ini adalah angka tujuh";
+                                                }else if (i > 5){
+                                                    cout<< "angka ini lebih besar dari lima";
+                                                }else{
+                                                    cout<<"angka ini lebih kecil dari lima";
+                                                }
+                                                return 0;
+                                            }
+                                    </pre>
+                                </div>
+                            </div>
+                            <br>
+                            Jika dijalankan, program itu akan menghasilkan output :
+                            <div class="contohbox border" style="border-radius: 15px">
+                                <div class="box m-5 bg-light" >
+                                    <pre>
+                                        angka ini lebih kecil dari lima
+                                    </pre>
+                                </div>
+                            </div>
+                    
+                    </p>'
         ]);
     }
 }

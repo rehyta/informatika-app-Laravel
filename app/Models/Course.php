@@ -10,7 +10,7 @@ class Course extends Model
     use HasFactory;
     protected $fillable = [
         'title',
-        'description',
+        'prompt',
         'slug'
     ];
     public function material()
@@ -20,5 +20,9 @@ class Course extends Model
     public function exercise()
     {
         return $this->hasOne(Exercise::class);
+    }
+    public function instruction()
+    {
+        return $this->hasOne(Instruction::class);
     }
 }

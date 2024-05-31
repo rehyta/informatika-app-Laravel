@@ -16,28 +16,32 @@ class CourseSeeder extends Seeder
     {
         Course::create([
             'title' => "Pengenalan Bahasa Pemrograman",
-            'description' => "test",
-            'slug' => Str::slug("Pengenalan Pemrograman")
+            'prompt' => "kita akan mengenali apa itu bahasa pemrograman",
+            'slug' => Str::slug("Pengenalan Pemrograman"),
         ]);
+
         Course::create([
             'title' => "Struktur Data C++",
-            'description' => "test",
-            'slug' => Str::slug("Struktur Data C++")
+            'prompt' => "kita akan mempelajari bagaimana struktur dasar C++",
+            'slug' => Str::slug("Struktur Data C++"),
         ]);
+
         Course::create([
             'title' => "Variable dan Tipe Data",
-            'description' => "test",
-            'slug' => Str::slug("Variable dan Tipe Data")
+            'prompt' => "kita akan mempelajari bagaimana membuat variable menyesuaikan tipe data dalam bahasa pemrograman",
+            'slug' => Str::slug("Variable dan Tipe Data"),
         ]);
+
         Course::create([
             'title' => "Operator dan Aritmatika",
-            'description' => "test",
-            'slug' => Str::slug("Operator dan Aritmatika")
+            'prompt' => "kita akan mempelajari bagaimana penggunaan operator dan aritmatika dalam bahasa pemrograman",
+            'slug' => Str::slug("Operator dan Aritmatika"),
         ]);
+
         Course::create([
             'title' => "Kondisi dan Percabangan",
-            'description' => "test",
-            'slug' => Str::slug("Kondisi dan Percabangan")
+            'prompt' => "kita akan mempelajari bagaimana menerapkan kondisi dan percabangan dalam program",
+            'slug' => Str::slug("Kondisi dan Percabangan"),
         ]);
     }
 }

@@ -48,4 +48,8 @@ class User extends Authenticatable
     // {
     //     return $this->belongsToMany(Material::class)->withPivot('is_read')->withTimestamps();
     // }
+    public function exercise()
+    {
+        return $this->hasOne(Exercise::class);
+    }
 }

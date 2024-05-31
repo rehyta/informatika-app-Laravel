@@ -10,12 +10,15 @@ class Exercise extends Model
     use HasFactory;
     protected $fillable = [
         'input',
-        'output',
-        'compiler_result',
+        'output'
     ];
     // Pada model Course
     public function course()
     {
         return $this->belongsTo(Course::class);
+    }
+    public function user()
+    {
+        return $this->belongsTo(User::class);
     }
 }

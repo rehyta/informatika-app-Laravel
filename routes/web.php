@@ -36,8 +36,13 @@ Route::post('/logout', [LoginController::class, 'logout']);
 Route::get('/register', [RegisterController::class, 'index']);
 Route::post('/register', [RegisterController::class, 'store']);
 
-Route::get('/dashboard',[DashboardController::class,'dashboard']);
-Route::get('/course-list',[DashboardController::class,'get_course_all']);
+Route::get('/home',[DashboardController::class,'home']);
+Route::get('/course',[DashboardController::class,'courses']);
+Route::get('/about',[DashboardController::class,'about']);
+
+
+Route::get('/materi/{material:slug}',[CourseController::class,'materialShow']);
+Route::get('/livecode/{material:slug}', [CourseController::class, 'livecodeShow']);
 
 Route::get('/compilebox',[ControllerCompiler::class,'index']);
 Route::post('/compiler',[ControllerCompiler::class,'processCode']);
