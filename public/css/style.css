@@ -205,3 +205,8 @@ span:hover{
   color: white;
   border-radius: 15px;
 }
+
+.btn2{
+    padding: 5px;
+    border-radius: 2px;
+}

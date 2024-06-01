@@ -1,7 +1,7 @@
 @extends('layout.course')
 
 @section('instruction')
-<h2 class="center m-2">{{ $title }}</h2>
+<h2 class="center m-2"> Tugas {{ $title }}</h2>
 {!! $soal !!}
 
 

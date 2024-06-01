@@ -46,7 +46,7 @@ Route::get('/livecode/{material:slug}', [CourseController::class, 'livecodeShow'
 
 Route::get('/compilebox',[ControllerCompiler::class,'index']);
 Route::post('/compiler',[ControllerCompiler::class,'processCode']);
-Route::get('/compilersave',[ControllerCompiler::class,'store']);
+Route::get('/save',[ControllerCompiler::class,'store']);
 
 Route::get('/course/materi/{materialId}',[CourseController::class,'show_by_id']);
 Route::get('/course/{slug}', 'CourseController@showTableOfContents')->name('course.table_of_contents');
