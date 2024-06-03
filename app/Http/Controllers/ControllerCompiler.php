@@ -55,43 +55,50 @@ class ControllerCompiler extends Controller
     }
 
     public function store(Request $request)
-{
-    $course = Course::find(session('course_id'));
-    // Validasi request jika diperlukan
-    $request->validate([
-        'input' => 'required',
-        'output' => 'required',
-    ]);
+    {
+        $course = Course::find(session('course_id'));
+        
+        $request->validate([
+            'input' => 'required',
+            'output' => 'required',
+        ]);
 
-    // Mengambil nilai dari textarea dengan nama "input"
-    $inputValue = $request->input('input');
+        
+        $inputValue = $request->input('input');
 
-    $files = [
-        'name' => 'main.cpp',
-        'content' => $inputValue
-    ];
+        $files = [
+            'name' => 'main.cpp',
+            'content' => $inputValue
+        ];
 
-    $accessToken = '2087b5bd-61bd-4c36-96f0-030e1f84b630';
+        $accessToken = '2087b5bd-61bd-4c36-96f0-030e1f84b630';
 
-    // Memproses input, contoh mengubah teks menjadi huruf kapital
-    $response = Http::withHeaders([
-        'Authorization' => 'Token ' . $accessToken,
-        'Content-type' => 'Application/json',
-    ])->post('https://glot.io/api/run/cpp/latest',[
-        'files' => [$files],
-    ]);
+        
+        $response = Http::withHeaders([
+            'Authorization' => 'Token ' . $accessToken,
+            'Content-type' => 'Application/json',
+        ])->post('https://glot.io/api/run/cpp/latest',[
+            'files' => [$files],
+        ]);
 
-    $outputValue = $response->json();
+        $outputValue = $response->json();
 
-    $stdout = $outputValue['stdout'];
+        $stdout = $outputValue['stdout'];
+        $stderr = $outputValue['stderr'];
 
-    // Menyimpan input dan output ke database
-    Livecode::create([
-        'input' => $inputValue,
-        'output' => $stdout
-    ]);
+        if ($stderr == "") {
+            // Menyimpan input dan output ke database
+            Livecode::create([
+                'course_id' => $course->id,
+                'user_id' => auth()->user()->id,
+                'input' => $inputValue,
+                'output' => $stdout
+            ]);
 
-    // Mengirimkan output kembali sebagai respons JSON
-    return response()->json(['output' => $stdout]);
-}
+            // Mengirimkan output kembali sebagai respons JSON
+            return response()->json(['output' => $stdout]);
+        }
+
+
+    }
 }

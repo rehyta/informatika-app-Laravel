@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Course;
 use Illuminate\Http\Request;
 use App\Models\Material;
-use App\Models\Exercise;
+use App\Models\Livecode;
 
 class DashboardController extends Controller
 {
@@ -22,7 +22,8 @@ class DashboardController extends Controller
         return view('dashboard.courses', [
             'title' => 'Course list',
             'courses' => Course::all(),
-            'materials'=>Material::all()
+            'materials'=> Material::all(),
+            'livecode'=>Livecode::all(),
         ]);
     }
     public function about()

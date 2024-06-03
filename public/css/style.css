@@ -210,3 +210,27 @@ span:hover{
     padding: 5px;
     border-radius: 2px;
 }
+header{
+    background-color: #ee4867;
+    margin-top: 20px;
+    height: auto;
+    width: 100%;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+.info{
+    box-shadow: 0 0 0 1px;
+    border-radius: 15px;
+    margin-top: 20px;
+    padding: 10px;
+    height: auto;
+    width: 100%;
+    text-align: left;
+}
+.awa{
+    height: 100px;
+    width: 100px;
+    box-shadow: 0 0 0 1px;
+    border-radius: 15px;
+}

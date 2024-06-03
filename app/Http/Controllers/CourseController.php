@@ -31,12 +31,15 @@ class CourseController extends Controller
     public function livecodeShow(Material $material)
     {
 
+        session()->put('course_id', $material->id);
+        
         return view('course.livecode',[
             "material"=>$material,
             "active"=>'material',
             "title" => $material->title,
             "soal"=> $material->soal,
         ]);
+
     }
 
 }

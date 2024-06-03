@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('title');
             $table->string('slug');
             $table->text('prompt');
+            //$table->foreignId('user_id')->constrained()->references('id')->on('users')->onDelete('cascade');
             // $table->unsignedBigInteger('material_id');
             // $table->foreign('material_id')->references('id')->on('materials');
             // $table->foreignId('material_id')->constrained('materials')->onDelete('cascade');

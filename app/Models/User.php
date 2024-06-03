@@ -44,12 +44,16 @@ class User extends Authenticatable
         'password' => 'hashed',
     ];
 
-    // public function materials()
-    // {
-    //     return $this->belongsToMany(Material::class)->withPivot('is_read')->withTimestamps();
-    // }
-    public function exercise()
+    public function materials()
     {
-        return $this->hasOne(Exercise::class);
+        return $this->belongsToMany(Material::class)->withPivot('is_read')->withTimestamps();
     }
+    // public function livecode()
+    // {
+    //     return $this->hasOne(Livecode::class)->withTimeStamps();
+    // }
+    // public function course()
+    // {
+    //     return $this->hasOne(Course::class)->withTimeStamps();
+    // }
 }

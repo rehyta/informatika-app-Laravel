@@ -37,7 +37,8 @@
                     if (actionUrl === '/compiler') {
                         $('#output').val(JSON.stringify(response.output));
                     } else if (actionUrl === '/save') {
-                        alert('Input saved successfully!');
+                        alert('Kamu berhasil!!');
+                        window.location.href='/course';
                     }
                 },
                 error: function (response) {

@@ -17,12 +17,12 @@ class Course extends Model
     {
         return $this -> hasOne(Material::class);
     }
-    public function exercise()
+    public function livecode()
     {
-        return $this->hasOne(Exercise::class);
+        return $this->hasOne(Livecode::class);
     }
-    public function instruction()
-    {
-        return $this->hasOne(Instruction::class);
-    }
+    // public function user()
+    // {
+    //     return $this->belongsTo(User::class);
+    // }
 }

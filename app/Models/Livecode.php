@@ -10,7 +10,9 @@ class Livecode extends Model
     use HasFactory;
     protected $fillable = [
         'input',
-        'output'
+        'output',
+        'course_id',
+        'user_id'
     ];
     // Pada model Course
     public function course()
