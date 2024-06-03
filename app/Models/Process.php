@@ -10,7 +10,7 @@ class Process extends Model
     use HasFactory;
     protected $fillable = [
         'user_id', 
-        'course_id', 
+        // 'course_id', 
         'material_id',
         'livecode_id', 
         'material_status', 
