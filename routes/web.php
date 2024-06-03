@@ -7,6 +7,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\SiswaController;
+use App\Http\Controllers\ProcessController;
 use App\Http\Controllers\CourseController;
 use App\Http\Controllers\liveCodeController;
 use App\Http\Controllers\PercobaanController;
@@ -58,3 +59,5 @@ Route::get('/data-course',[AdminController::class, 'DataCourse']);
 Route::get('/hasil-belajar',[AdminController::class, 'HasilBelajar']);
 
 Route::resource('siswa', SiswaController::class);
+
+Route::get('/materi-done',[ProcessController::class, 'materiDone']);

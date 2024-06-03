@@ -5,16 +5,18 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Progress extends Model
+class Process extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'user_id', // ID pengguna
-        'course_id', // ID course
-        'percentage', // Persentase selesai
+        'user_id', 
+        'course_id', 
+        'material_id',
+        'livecode_id', 
+        'material_status', 
+        'livecode_status', 
     ];
 
-    // Relasi dengan model User
     public function user()
     {
         return $this->belongsTo(User::class);
@@ -25,5 +27,12 @@ class Progress extends Model
     {
         return $this->belongsTo(Course::class);
     }
-
+    public function material()
+    {
+        return $this->belongsTo(Material::class);
+    }
+    public function livecode()
+    {
+        return $this->belongsTo(Livecode::class);
+    }
 }

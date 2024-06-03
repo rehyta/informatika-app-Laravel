@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Course;
 use App\Models\Material;
 use App\Models\Instruction;
+use App\Models\Progress;
 use Illuminate\Http\Request;
 
 class CourseController extends Controller
@@ -41,5 +42,7 @@ class CourseController extends Controller
         ]);
 
     }
+
+
 
 }

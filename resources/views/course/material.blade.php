@@ -7,10 +7,10 @@
 @section('materi')
 {!! $content !!}
 
-<form action="/course-2">
-    <p>klik tombol <b>Next</b> untuk lanjut ke bagian berikutnya</p>
+<form action="/materi-done">
+    <p>klik tombol <b>Selesai</b> jika sudah mengerti</p>
     <div class="d-grid gap-2 d-md-flex">
-        <button class="btn btn-primary me-md-2 bg-danger" id="nextSection" type="submit">NEXT</button>
+        <button class="btn btn-primary me-md-2 bg-danger" type="submit">Selesai</button>
     </div>
 </form>
 @endsection
