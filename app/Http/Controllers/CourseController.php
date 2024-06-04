@@ -44,7 +44,6 @@ class CourseController extends Controller
         return redirect('/course')->with('error', 'Process not found.');
     }
 
-
     public function livecodeShow(Material $material)
     {
 

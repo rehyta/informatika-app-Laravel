@@ -44,6 +44,7 @@ Route::get('/about',[DashboardController::class,'about']);
 
 
 Route::get('/materi/{material:slug}',[CourseController::class,'materialShow']);
+Route::get('/materi/{material_id}/update-status',[CourseController::class,'updateMaterialStatus'])->name('material.update-status');
 Route::get('/livecode/{material:slug}', [CourseController::class, 'livecodeShow']);
 Route::get('/materi/{material_id}/update-status',[CourseController::class,'updateMaterialStatus'])->name('material.update-status');
 
