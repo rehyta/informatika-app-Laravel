@@ -14,9 +14,9 @@ return new class extends Migration
         Schema::create('processes', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->constrained();
-            $table->foreignId('course_id')->constrained('courses');
-            $table->foreignId('material_id')->constrained('materials');
-            $table->foreignId('livecode_id')->constrained('livecodes');
+            $table->foreignId('course_id')->nullable()->constrained('courses');
+            $table->foreignId('material_id')->nullable()->constrained('materials');
+            $table->foreignId('livecode_id')->nullable()->constrained('livecodes');
             $table->boolean('material_status')->default(false);
             $table->boolean('livecode_status')->default(false);
             $table->timestamps();

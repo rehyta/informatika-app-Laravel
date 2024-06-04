@@ -8,6 +8,7 @@ use App\Models\User;
 use App\Models\Course;
 use App\Models\Material;
 use App\Models\Livecode;
+use App\Models\Process;
 
 class AdminController extends Controller
 {
@@ -47,9 +48,23 @@ class AdminController extends Controller
 
     public function HasilBelajar()
     {
-        return view ('admin.hasilBelajar',[
-            'title'=>"Data Hasil Belajar",
-        ]);
+        // $progress = Process::select('processes.*', 'courses.title as courses_title')
+        // ->rightjoin('courses', 'processes.course_id', '=', 'courses.id')
+        // ->get();
+        $progress = Process::get();
+
+    
+        $title = 'hasil belajar';
+
+        // return view ('admin.hasilBelajar',[
+        //     'title'=>"Data Hasil Belajar",
+        //     'user'=>User::select('name'),
+        //     'process'=>Process::all(),
+        //     'courses'=>$progress,
+        //     'materials'=> Material::all(),
+        //     'livecodes'=>Livecode::all(),
+        // ]);
+        return view ('admin.hasilBelajar',compact('title','progress'));
     }
 
 }

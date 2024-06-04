@@ -28,7 +28,7 @@
         </div>
 
         <div class="row">
-            <div class="col border border-2" id="left">
+            <div class="col border border-2" id="left" style="height: auto">
                 <!--isinya instruksi-->
                 @yield ('instruction')
             </div>

@@ -29,19 +29,19 @@ class CourseController extends Controller
     }
 
     public function updateMaterialStatus($material_id) {
-        $process = Process::create([
+
+        $process = Process::updateOrCreate([
             "user_id" => auth()->user()->id,
+            "course_id"=> Material::find($material_id)->course_id,
             "material_id" => $material_id,
-            "livecode_id" => null,
             "material_status" => true,
-            "livecode_status" => false,
         ]);
 
         if ($process) {
-            return redirect('/course')->with('success', 'Material status updated successfully.');
+            return redirect('/home')->with('success', 'Material status updated successfully.');
         }
 
-        return redirect('/course')->with('error', 'Process not found.');
+        return redirect('/home')->with('error', 'Process not found.');
     }
 
     public function livecodeShow(Material $material)
@@ -55,6 +55,7 @@ class CourseController extends Controller
             "title" => $material->title,
             "soal"=> $material->soal,
         ]);
+        
 
     }
 

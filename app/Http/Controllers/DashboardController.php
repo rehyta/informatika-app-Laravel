@@ -2,33 +2,60 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\DB;
 use App\Models\Course;
-use Illuminate\Http\Request;
-use App\Models\Material;
-use App\Models\Livecode;
 use App\Models\Process;
+use App\Models\Livecode;
+use App\Models\Material;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\Controller;
+use Illuminate\Database\Query\JoinClause;
 
 class DashboardController extends Controller
 {
     public function home()
     {
-        $courses = Course::with('processes')->get();
 
-        $progress = Process::select('processes.*', 'courses.title as course_title')
-        ->join('courses', 'processes.course_id', '=', 'courses.id')
-        ->get();
+        $userId = auth()->user()->id;
 
-        dd($progress);
+        // $progress = Process::select('processes.*', 'courses.title as courses_title')
+        // ->rightjoin('courses', 'processes.course_id', '=', 'courses.id')
+        // ->where ('processes.user_id', $userId)
+        // ->get();  
         
+        // dd($progress);
+        
+        // //$courses=Course::get();
 
-            return view('dashboard.home', [
-                'title' => 'Home',
-                'process'=>$progress,
-                'courses'=>$courses,
-            ]);
+        
+        // // $title = 'Home';
+        //     return view('dashboard.home', [
+        //         'title' => 'Home',
+        //         'process'=>$progress,
+        //     ]);
+
+        $courses = Course::leftJoin('processes', function($join) use ($userId) {
+            $join->on('courses.id', '=', 'processes.course_id')
+                 ->where('processes.user_id', '=', $userId);
+        })
+        ->select('courses.*', 'processes.material_status', 'processes.livecode_status')
+        ->get();
+    
+        // Prepare the data for the view
+        return view('dashboard.home', [
+            'title' => 'Home',
+            'courses' => $courses,
+        ]);
+
+            //return view('dashboard.home', compact('title', 'courses'));
     }
+   
+
+
+
+
+
+
     public function courses()
     {
 

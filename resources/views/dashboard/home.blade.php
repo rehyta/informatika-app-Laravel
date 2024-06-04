@@ -9,27 +9,12 @@
     </svg>
     <h2 class="text-center">Selamat Datang {{ auth()->user()->username }} </h2>
 </header>
-<div class="list-info">
-    <div class="px-4 text-center">
-        <div class="row gx-5">
-          <div class="awa col">
-           <div class="p-3">jumlah course</div>
-          </div>
-          <div class="awa col">
-            <div class="p-3">asasa</div>
-          </div>
-          <div class="awa col">
-            <div class="p-3">hasil belajar</div>
-          </div>
-        </div>
-      </div>
-</div>
 <div class="info">
     <p>
-        <b class="center">Proses Belajar</b>
+        <b class="center" style="font-size: 28px">Proses Belajar</b>
         <table class="table table-bordered">
           <thead>
-              <tr>
+              <tr class="text-center">
                   <th></th>
                   <th>Course</th>
                   <th>Material</th>
@@ -37,16 +22,35 @@
               </tr>
           </thead>
           <tbody>
-            @foreach ($courses as $key => $course)
-                @foreach ($course->processes as $process)
-                    <tr>
-                        <td>{{ $key + 1 }}</td>
-                        <td>{{ $course->title }}</td>
-                        <td>{{ $process->material_status }}</td>
-                        <td>{{ $process->livecode_status }}</td>
-                    </tr>
-                @endforeach
+
+                @foreach ($courses as $item)
+               <tr>
+                    <td>{{ $loop -> iteration }}</td>
+                    <td>{{ $item->title }}</td>
+                    @if(is_null($item->material_status) && is_null($item->livecode_status))
+                        <td class="text-center"><i class="bi bi-clock-fill" style="color: red;"></i></td>
+                        <td class="text-center"><i class="bi bi-clock-fill" style="color: red;"></i></td>
+                    @else 
+                    <td class="text-center">
+                        @if($item->material_status)
+                        <i class="bi bi-check-circle-fill" style="color: green;"></i>
+                        @else
+                            <i class="bi bi-clock-fill" style="color: red;"></i>
+                        @endif
+                    </td>
+                    <td class="text-center">
+                        @if($item->livecode_status)
+                        <i class="bi bi-check-circle-fill" style="color: green;"></i>
+                        @else
+                            <i class="bi bi-clock-fill" style="color: red;"></i>
+                        @endif
+                    </td>
+                        {{-- <td>{{ $item->material_status ? "Sudah Terisi" : "Belum Terisi" }}</td>
+                        <td>{{ $item->livecode_status ? "Sudah Terisi" : "Belum Terisi" }}</td> --}}
+                    @endif
+               </tr>
             @endforeach
+        
           </tbody>
       </table>
       

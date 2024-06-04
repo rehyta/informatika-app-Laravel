@@ -5,16 +5,20 @@
 <!--nanti bakal ada satu card isinya tujuan dibuatnya website secara umum-->
 <div class="kartu center" id="isi-website">
     <h5>Tujuan Website</h5>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi fugiat doloremque ipsa expedita aspernatur, quod excepturi molestiae aperiam consectetur ipsum error, a velit laborum amet inventore temporibus reiciendis eos modi beatae sunt praesentium rerum alias fuga quo! Repellat facilis quos odio aspernatur provident! Sit quas quidem eveniet distinctio ad saepe quis laboriosam magnam dolorum earum dolore porro eius veritatis accusamus tenetur quasi impedit harum nulla a praesentium deleniti, obcaecati quia ducimus nisi! Nostrum necessitatibus hic provident nemo, eius natus voluptatem repellat incidunt eligendi dignissimos. Cum excepturi laboriosam quam obcaecati voluptatum, ipsam vel, reprehenderit fugit quia maxime minus ipsum quos, harum eveniet magni. Repellendus, vel ea. Voluptatum, minima! Dolorum illum nihil pariatur tempore nesciunt sint velit obcaecati nulla eius voluptate officia, commodi exercitationem aliquid ratione veritatis aperiam neque assumenda quia molestiae eaque perferendis asperiores! Suscipit sed unde, eveniet, nisi soluta similique tempora fugit alias possimus, cupiditate provident itaque dolores ducimus optio quaerat dolorum hic praesentium laborum maiores! Eius veritatis earum iure odit debitis dolores ea delectus! Eveniet, fugiat debitis suscipit earum aliquam, laboriosam repellendus consequatur tenetur perspiciatis eaque ab totam, incidunt tempore adipisci inventore sit sint ut rerum obcaecati quam iure a quas! Id rem asperiores quibusdam numquam nobis. Ratione, id!</p>
+    <p>
+        Selamat datang!!! ini adalah sebuah platform pembelajaran daring yang didedikasikan untuk meningkatkan pemahaman dan keterampilan dalam pemrograman dasar. Kami berkomitmen untuk menyediakan lingkungan belajar yang interaktif, mendidik, dan menyenangkan bagi para pengguna dari berbagai latar belakang. Dengan fokus pada pemrograman dasar, kami menyediakan materi-materi berkualitas yang dirancang secara khusus untuk membantu pemula dalam memahami konsep-konsep dasar dan membangun fondasi yang kuat dalam dunia pemrograman. Melalui kombinasi dari pembelajaran mandiri dan latihan yang interaktif, kami bertujuan untuk mempercepat proses belajar Anda dan mempersiapkan Anda untuk tantangan dalam dunia teknologi yang semakin berkembang pesat. Segera mulai perjalanan pembelajaran Anda bersama kami dan temukan potensi Anda dalam dunia pemrograman!
+    </p>
 </div>
 <!--nanti bakal ada satu card isinya tujuan dibuatnya website secara khusus alias skripsi-->
-<div class="kartu" id="tujuan-website">
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis veritatis soluta dicta in! Accusantium quos natus, necessitatibus porro aut iste amet cumque? Ab cumque suscipit id eos eaque nam, a corporis aut nulla, accusamus voluptates ducimus quibusdam similique cum in sit dolor distinctio, quo ullam ut. Officiis quasi deleniti minus, porro nobis in beatae ratione incidunt sint reiciendis eius sed sit. Quae exercitationem dolorem incidunt delectus iste. Assumenda impedit nihil sit aspernatur doloribus laboriosam nostrum, rerum non dolor alias commodi nulla maiores cumque dolores perspiciatis quae optio, quam odio iste aliquid iure laudantium voluptas veritatis. Numquam eligendi quia delectus voluptatibus.</p>
-</div>
-<!--nanti bakal ada satu card isinya biodata developer-->
-<div class="kartu" id="biodata">
-    <h5>Tentang Developer</h5>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi nostrum quaerat quibusdam commodi harum alias saepe reiciendis cum officiis aperiam facere, numquam et earum, inventore, quod perspiciatis. At consectetur repellendus velit, maiores veritatis omnis inventore impedit pariatur itaque dolorum eligendi facere saepe non autem sapiente illo aliquam accusamus. Distinctio architecto possimus voluptatibus sapiente aperiam vero voluptatum numquam voluptates delectus asperiores magni provident voluptate quasi corporis dolores, quia animi tenetur doloremque corrupti veniam placeat. Omnis incidunt quos placeat eius ipsum temporibus distinctio et labore illum nulla quidem doloremque, voluptate laboriosam earum impedit totam maiores asperiores quibusdam, ab obcaecati voluptates tempora sint! Magni dolor illum cupiditate quas recusandae id illo sit, odit facilis, perferendis, officia ullam. Aspernatur non suscipit distinctio, nisi mollitia dolore laudantium cum quos voluptatem iure accusantium laboriosam iste, repudiandae vero a tempora excepturi nam harum corrupti velit consequatur? Praesentium architecto culpa fuga sed aliquam labore temporibus provident obcaecati pariatur voluptatibus. Ad ipsa corrupti quidem similique delectus unde! Possimus eius et amet sed enim, consectetur expedita tenetur corporis minima, voluptatem odit. Eum iure mollitia incidunt vel fugit maxime, nihil eveniet quia vero earum distinctio tempora commodi aliquid nulla facere officiis reprehenderit reiciendis? Eius repellendus sint temporibus, fugiat porro deserunt nemo?</p>
+<div class="kartu3 m-5" id="tujuan-website">
+    <p>
+    <b>Tentang Pengembang</b> <br>
+    Perkenalkan, nama saya PRAMBAYU REHYTA MURYANDARI, saya mahasiswa dari program studi pendidikan teknologi Informasi di Univesitas Negeri Surabaya.
+    <br>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiqlOmyMxKzevSP_ji6uOvS8fG4iGcDPD-Yw&s" alt="Deskripsi gambar">
+    <br>jika menemui masalah atau pertanyaan seputar web ini bisa hubungi nomor : <br>
+    (+62)85155193877 (WA)
+    </p>
 </div>
 
 

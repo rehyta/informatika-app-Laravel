@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
+use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Http;
 Use App\Models\Livecode;
@@ -57,6 +58,7 @@ class ControllerCompiler extends Controller
 
     public function store(Request $request)
     {
+
         $course = Course::find(session('course_id'));
         
         $request->validate([
@@ -96,9 +98,28 @@ class ControllerCompiler extends Controller
                 'output' => $stdout
             ]);
 
+            
+
+            // Process::updated([
+            //     "user_id" => auth()->user()->id,
+            //     "course_id" => $course->id, 
+            //     "livecode_id" => $livecode->id,
+            //     "livecode_status" => true,
+            // ]);
+
             if ($livecode) {
-                $process = Process::where('user_id', '=', auth()->user()->id)->where('material_id', '=', session('course_id'))->first();
+                $process = Process::where('user_id', auth()->user()->id)
+                ->where('material_id', session('course_id'))
+                ->first();
+
                 $process->update([
+                    "livecode_id" => $livecode->id,
+                    "livecode_status" => true
+                ]);
+            } else{
+                Process::create([
+                    "user_id" => auth()->user()->id,
+                    "material_id" => session('course_id'),
                     "livecode_id" => $livecode->id,
                     "livecode_status" => true
                 ]);
@@ -107,6 +128,16 @@ class ControllerCompiler extends Controller
             // Mengirimkan output kembali sebagai respons JSON
             return response()->json(['output' => $stdout]);
         }
+        
+
+        // $livecode_id = Livecode::create([
+        //     'course_id' => $course->id,
+        //     'user_id' => auth()->user()->id,
+        //     'input' => $inputValue,
+        //     'output' => $stdout
+        // ]);
+
+        
 
 
     }

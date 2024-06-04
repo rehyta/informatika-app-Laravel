@@ -13,10 +13,10 @@ class Course extends Model
         'prompt',
         'slug'
     ];
-    public function material()
-    {
-        return $this ->hasOne(Material::class);
-    }
+    // public function material()
+    // {
+    //     return $this ->hasOne(Material::class);
+    // }
     public function livecode()
     {
         return $this->hasOne(Livecode::class);

@@ -10,12 +10,17 @@ class Process extends Model
     use HasFactory;
     protected $fillable = [
         'user_id', 
-        // 'course_id', 
+        'course_id', 
         'material_id',
         'livecode_id', 
         'material_status', 
         'livecode_status', 
     ];
+    public function progress($course, $id)
+    {
+ 
+        return Process::where('course_id', $course)->where('user_id', Auth()->user()->id)->where('id', $id)->first();
+    }
 
     public function user()
     {
