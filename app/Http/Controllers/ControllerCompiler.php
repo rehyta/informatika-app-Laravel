@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Http;
 Use App\Models\Livecode;
 Use App\Models\Course;
+Use App\Models\Process;
 
 class ControllerCompiler extends Controller
 {
@@ -88,12 +89,20 @@ class ControllerCompiler extends Controller
 
         if ($stderr == "") {
             // Menyimpan input dan output ke database
-            Livecode::create([
+            $livecode = Livecode::create([
                 'course_id' => $course->id,
                 'user_id' => auth()->user()->id,
                 'input' => $inputValue,
                 'output' => $stdout
             ]);
+
+            if ($livecode) {
+                $process = Process::where('user_id', '=', auth()->user()->id)->where('material_id', '=', session('course_id'))->first();
+                $process->update([
+                    "livecode_id" => $livecode->id,
+                    "livecode_status" => true
+                ]);
+            }
 
             // Mengirimkan output kembali sebagai respons JSON
             return response()->json(['output' => $stdout]);

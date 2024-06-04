@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Course;
 use App\Models\Material;
 use App\Models\Instruction;
-use App\Models\Progress;
+use App\Models\Process;
 use Illuminate\Http\Request;
 
 class CourseController extends Controller
@@ -18,7 +18,6 @@ class CourseController extends Controller
         if (!$material) {
             return abort(404); // Material not found
         }
-
     
         return view('course.material', [
             "material"=>$material,
@@ -28,6 +27,23 @@ class CourseController extends Controller
             
         ]);
     }
+
+    public function updateMaterialStatus($material_id) {
+        $process = Process::create([
+            "user_id" => auth()->user()->id,
+            "material_id" => $material_id,
+            "livecode_id" => null,
+            "material_status" => true,
+            "livecode_status" => false,
+        ]);
+
+        if ($process) {
+            return redirect('/course')->with('success', 'Material status updated successfully.');
+        }
+
+        return redirect('/course')->with('error', 'Process not found.');
+    }
+
 
     public function livecodeShow(Material $material)
     {

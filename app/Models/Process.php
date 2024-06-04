@@ -21,8 +21,6 @@ class Process extends Model
     {
         return $this->belongsTo(User::class);
     }
-
-    // Relasi dengan model Course (jika ada)
     public function course()
     {
         return $this->belongsTo(Course::class);

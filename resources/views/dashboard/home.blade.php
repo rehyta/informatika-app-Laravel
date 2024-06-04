@@ -26,14 +26,30 @@
 </div>
 <div class="info">
     <p>
-        <b>Tata Cara Penggunaan Website</b>
-        <ul class="list-group list-group-flush">
-            <li class="list-group-item">An item</li>
-            <li class="list-group-item">A second item</li>
-            <li class="list-group-item">A third item</li>
-            <li class="list-group-item">A fourth item</li>
-            <li class="list-group-item">And a fifth one</li>
-          </ul>
+        <b class="center">Proses Belajar</b>
+        <table class="table table-bordered">
+          <thead>
+              <tr>
+                  <th></th>
+                  <th>Course</th>
+                  <th>Material</th>
+                  <th>Live Code</th>
+              </tr>
+          </thead>
+          <tbody>
+            @foreach ($courses as $key => $course)
+                @foreach ($course->processes as $process)
+                    <tr>
+                        <td>{{ $key + 1 }}</td>
+                        <td>{{ $course->title }}</td>
+                        <td>{{ $process->material_status }}</td>
+                        <td>{{ $process->livecode_status }}</td>
+                    </tr>
+                @endforeach
+            @endforeach
+          </tbody>
+      </table>
+      
     </p>
 </div>
 

@@ -7,7 +7,9 @@
 @section('materi')
 {!! $content !!}
 
-<form action="/materi-done">
+
+<form action="{{ route('material.update-status', $material->id) }}">
+    @csrf
     <p>klik tombol <b>Selesai</b> jika sudah mengerti</p>
     <div class="d-grid gap-2 d-md-flex">
         <button class="btn btn-primary me-md-2 bg-danger" type="submit">Selesai</button>

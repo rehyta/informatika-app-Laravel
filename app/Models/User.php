@@ -46,14 +46,18 @@ class User extends Authenticatable
 
     public function materials()
     {
-        return $this->belongsToMany(Material::class)->withPivot('is_read')->withTimestamps();
+        return $this->hasOne(Material::class)->withTimeStamps();
     }
-    // public function livecode()
-    // {
-    //     return $this->hasOne(Livecode::class)->withTimeStamps();
-    // }
-    // public function course()
-    // {
-    //     return $this->hasOne(Course::class)->withTimeStamps();
-    // }
+    public function livecode()
+    {
+        return $this->hasOne(Livecode::class)->withTimeStamps();
+    }
+    public function course()
+    {
+        return $this->hasOne(Course::class)->withTimeStamps();
+    }
+    public function process()
+    {
+        return $this->hasMany(Process::class);
+    }
 }

@@ -45,6 +45,7 @@ Route::get('/about',[DashboardController::class,'about']);
 
 Route::get('/materi/{material:slug}',[CourseController::class,'materialShow']);
 Route::get('/livecode/{material:slug}', [CourseController::class, 'livecodeShow']);
+Route::get('/materi/{material_id}/update-status',[CourseController::class,'updateMaterialStatus'])->name('material.update-status');
 
 Route::get('/compilebox',[ControllerCompiler::class,'index']);
 Route::post('/compiler',[ControllerCompiler::class,'processCode']);
@@ -60,4 +61,4 @@ Route::get('/hasil-belajar',[AdminController::class, 'HasilBelajar']);
 
 Route::resource('siswa', SiswaController::class);
 
-Route::get('/materi-done',[ProcessController::class, 'materiDone']);
+Route::post('/materi-done/{id}', [ProcessController::class, 'markMaterialDone'])->name('materi.done');

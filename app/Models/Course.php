@@ -15,14 +15,18 @@ class Course extends Model
     ];
     public function material()
     {
-        return $this -> hasOne(Material::class);
+        return $this ->hasOne(Material::class);
     }
     public function livecode()
     {
         return $this->hasOne(Livecode::class);
     }
-    // public function user()
-    // {
-    //     return $this->belongsTo(User::class);
-    // }
+    public function processes()
+    {
+        return $this->hasMany(Process::class);
+    }
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

@@ -444,13 +444,6 @@ class MaterialSeeder extends Seeder
                     <pre> Halo Bu Rudi Selamat ulang tahun yang ke-43</pre>
                     <p>ini dikarenakan variable nama menyimpan data berupa string "Bu Rudi" dan variable umur menyimpan data berupa interger (int) berupa angka 43 </p>
                 </div>
-            
-                <form action="/course-3/livecode">
-                    <p>Bagaimana jika kita mencobanya? klik tombol <b>Next</b> untuk lanjut ke bagian berikutnya</p>
-                    <div class="d-grid gap-2 d-md-flex">
-                        <button class="btn btn-primary me-md-2 bg-danger" id="nextSection" type="submit">NEXT</button>
-                    </div>
-                </form>
             </div>'
         ]);
 
@@ -810,13 +803,6 @@ class MaterialSeeder extends Seeder
                     <div class="tugas">
                         <p>buatlah variable A, B, C dan variable D yang berisi variable ABC.</p>
                     </div>
-                    
-                    <form action="/course-4/livecode">
-                        <p>Bagaimana jika kita mencobanya? klik tombol <b>Next</b> untuk lanjut ke bagian berikutnya</p>
-                        <div class="d-grid gap-2 d-md-flex">
-                            <button class="btn btn-primary me-md-2 bg-danger" id="nextSection" type="submit">NEXT</button>
-                        </div>
-                    </form>
                 </div>'
         ]);
 

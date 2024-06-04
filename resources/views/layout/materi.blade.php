@@ -17,6 +17,12 @@
         <div class="page-title text-center mt-3">
             @yield('page title')
         </div>
+        @if (session('success'))
+            <div>{{ session('success') }}</div>
+        @endif
+        @if (session('error'))
+            <div>{{ session('error') }}</div>
+        @endif
 
         <div class="materi-box">
             <div class="materi border border-black border-1">
