@@ -55,10 +55,10 @@ Route::post('/save',[ControllerCompiler::class,'store']);
 Route::get('/course/materi/{materialId}',[CourseController::class,'show_by_id']);
 Route::get('/course/{slug}', 'CourseController@showTableOfContents')->name('course.table_of_contents');
 
-Route::get('/adminboard',[AdminController::class, 'dashboard']);
-Route::get('/data-siswa',[AdminController::class, 'DataSiswa']);
-Route::get('/data-course',[AdminController::class, 'DataCourse']);
-Route::get('/hasil-belajar',[AdminController::class, 'HasilBelajar']);
+Route::get('/adminboard',[AdminController::class, 'dashboard'])->middleware('admin');
+Route::get('/data-siswa',[AdminController::class, 'DataSiswa'])->middleware('admin');
+Route::get('/data-course',[AdminController::class, 'DataCourse'])->middleware('admin');
+Route::get('/hasil-belajar',[AdminController::class, 'HasilBelajar'])->middleware('admin');
 
 Route::resource('siswa', SiswaController::class);
 

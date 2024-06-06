@@ -23,9 +23,9 @@
           </thead>
           <tbody>
 
-                @foreach ($courses as $item)
+                @foreach ($courses->sortBy('id') as $key => $item)
                <tr>
-                    <td>{{ $loop -> iteration }}</td>
+                    <td>{{ $key + 1 }}</td>
                     <td>{{ $item->title }}</td>
                     @if(is_null($item->material_status) && is_null($item->livecode_status))
                         <td class="text-center"><i class="bi bi-clock-fill" style="color: red;"></i></td>
@@ -35,7 +35,7 @@
                         @if($item->material_status)
                         <i class="bi bi-check-circle-fill" style="color: green;"></i>
                         @else
-                            <i class="bi bi-clock-fill" style="color: red;"></i>
+                        <i class="bi bi-clock-fill" style="color: red;"></i>
                         @endif
                     </td>
                     <td class="text-center">

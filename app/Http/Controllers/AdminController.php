@@ -15,6 +15,8 @@ class AdminController extends Controller
     //
     public function dashboard()
     {
+        $this->authorize('admin');
+
         return view ('admin.dashboard',[
             'title'=>"Board",
         ]);
@@ -23,6 +25,8 @@ class AdminController extends Controller
     public function DataSiswa()
     {
     
+        $this->authorize('admin');
+
         return view ('admin.siswa.dataSiswa',[
             'title'=>"Data Siswa",
             'siswa'=>User::all(),
@@ -31,13 +35,18 @@ class AdminController extends Controller
 
     public function destroy(User $siswa)
     {
+        $this->authorize('admin');
+
         $siswa->delete();
         return redirect()->route('admin.siswa.dataSiswa')->with('success', 'Siswa berhasil dihapus.');
     }
 
 
-    public function DataCourse()
+    public function DataCourse(Request $request)
     {
+        $this->authorize('admin');
+
+    
         return view ('admin.course.dataCourse',[
             'title'=>"Data Course",
             'courses' => Course::all(),
@@ -48,22 +57,23 @@ class AdminController extends Controller
 
     public function HasilBelajar()
     {
-        // $progress = Process::select('processes.*', 'courses.title as courses_title')
-        // ->rightjoin('courses', 'processes.course_id', '=', 'courses.id')
-        // ->get();
-        $progress = Process::get();
+        $this->authorize('admin');
+
+        $progress = Course::leftJoin('processes', function($join) {
+                $join->on('courses.id', '=', 'processes.course_id');
+            })
+            ->leftJoin('users', function($join) {
+                $join->on('processes.user_id', '=', 'users.id');
+            })
+            ->select('users.name', 'courses.*', 'processes.material_status', 'processes.livecode_status')
+            ->get();
+        
+
 
     
         $title = 'hasil belajar';
 
-        // return view ('admin.hasilBelajar',[
-        //     'title'=>"Data Hasil Belajar",
-        //     'user'=>User::select('name'),
-        //     'process'=>Process::all(),
-        //     'courses'=>$progress,
-        //     'materials'=> Material::all(),
-        //     'livecodes'=>Livecode::all(),
-        // ]);
+    
         return view ('admin.hasilBelajar',compact('title','progress'));
     }
 

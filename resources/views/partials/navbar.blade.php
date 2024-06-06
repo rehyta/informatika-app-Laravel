@@ -1,13 +1,24 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
   <div class="container">
 
-    <a class="navbar-brand" href="/" style="font-size: 1.5rem">INFORMATIKA</a>
+    <a class="navbar-brand" href="/" style="font-size: 1.5rem">MEDIPETIKA</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav mx-auto gap-5">
+        @can('admin')
+        <li class="nav-item">
+          <a class="nav-link {{ ($title === "AdminBoard") ? 'active' : '' }}" href="/adminboard">Adminboard</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {{ ($title === "Data Siswa") ? 'active' : '' }}" href="/data-siswa">Data Siswa</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {{ ($title === "Hasil Belajar") ? 'active' : '' }}" href="/hasil-belajar">Hasil Belajar</a>
+        </li>
+        @endcan
         <li class="nav-item">
           <a class="nav-link {{ ($title === "Home") ? 'active' : '' }}" href="/home">Home</a>
         </li>
@@ -18,6 +29,7 @@
           <a class="nav-link {{ ($title === "About") ? 'active' : '' }}" href="/about">About</a>
         </li>
       </ul>
+      
 
       <ul class="navbar-nav ms-auto">
 

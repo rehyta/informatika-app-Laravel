@@ -10,11 +10,7 @@
     <h2 class="text-center">Selamat Datang {{ auth()->user()->username }} </h2>
 </header>
 <div class="list-button">
-  <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-    <a href="/data-siswa" class="btn1" id="dataSiswa">Data Siswa</a> <!--CRUD data siswa-->
-    <a href="/data-course" class="btn1" id="dataCourse">Data Course</a> <!--nanti bisa buat bikin materi dan excercise-->
-    <a href="/hasil-belajar" class="btn1" id="hasilBelajar">Hasil Belajar</a> <!--isinya raport hasil belajar siswa-->
-  </div>
+  <!--Nanti berisi kotak 'jumlah siswa', 'jumlah course', 'jumlah course selesai'-->
 </div>
 <div class="info">
   
