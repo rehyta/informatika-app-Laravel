@@ -25,33 +25,37 @@
 
         <div class="page-title text-center mt-3">
             <h1>pretest</h1>
-            <p>penjelasan project</p>
+            <p>Bacalah petunjuk instruksi yang tersedia dan terapkan dalam bahasa pemrograman</p>
         </div>
 
         <div class="row">
             <div class="col border border-2" id="left" style="height: auto">
+                <h4 style="text-align: center">instruksi</h4>
+                <br>
                 <p>
-                    Buatlah program yang meminta pengguna memasukkan nilai ujian (dalam rentang 0-100). <br>
-                    Kemudian, program akan menampilkan predikat sesuai dengan nilai yang dimasukkan:<br>
-                    Nilai >= 90: A <br>
-                    Nilai >= 80: B<br>
-                    Nilai >= 70: C<br>
-                    Nilai >= 60: D<br>
-                    Nilai < 60: E<br>
+                    Dika ingin membuat program sederhana yang bisa menentukan apakah sebuah bilangan genap atau ganjil.<br>
+                    <br>
+                    <br>1. Jika bilangan habis dibagi 2 (modulus % 2 == 0), maka bilangan tersebut Genap.
+                    <br>2. Jika tidak, maka bilangan tersebut Ganjil.
+                    <br>
+                    <br>Tugas:
+                    <br>Buatlah program C++ yang meminta pengguna memasukkan sebuah bilangan, lalu menentukan apakah bilangan tersebut genap atau ganjil.
                 </p>
             </div>
 
             <div class="col border border-2" id="right">
-                <div class="compiler md-1">
-                    <div class="input-code">
-                        <form id="compilerForm" class="input md-1" method="post" action="">
-                            @csrf
-                            <button type="button" class="btn2 run-btn mb-1 bg-danger" id="runButton" style="color: white"><i class="bi bi-caret-left-fill" style="color: black"></i>RUN</button>
-                            <button type="button" class="btn2 run-btn mb-1 bg-danger" id="saveButton" style="color: white"><i class="bi bi-caret-left-fill" style="color: black"></i>SUBMIT</button>
-                            <br>
-                            <textarea name="input" id="input" cols="60" rows="10" placeholder="tulis program anda disini" required></textarea>
-                            <textarea name="output" class="mt-2" id="output" cols="60" rows="10" readonly></textarea>
-                        </form>
+                <div class="box">
+                    <div class="compiler md-1">
+                        <div class="input-code">
+                            <form id="compilerForm" class="input md-1" method="post" action="">
+                                @csrf
+                                <button type="button" class="btn2 run-btn mb-1 bg-danger" id="runButton" style="color: white"><i class="bi bi-caret-left-fill" style="color: black"></i>RUN</button>
+                                <button type="button" class="btn2 run-btn mb-1 bg-danger" id="saveButton" style="color: white"><i class="bi bi-caret-left-fill" style="color: black"></i>SUBMIT</button>
+                                <br>
+                                <textarea name="input" id="input" cols="60" rows="10" placeholder="tulis program anda disini" required></textarea>
+                                <textarea name="output" class="mt-2" id="output" cols="60" rows="10" readonly></textarea>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>

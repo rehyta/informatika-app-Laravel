@@ -4,7 +4,8 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ControllerCompiler;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
-use App\Http\Controllers\LoginController;
+use App\Http\Controllers\MyLoginController;
+use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\SiswaController;
@@ -38,6 +39,7 @@ Route::get('/login', [LoginController::class, 'index']);
 Route::post('/login', [LoginController::class, 'authenticate']);
 Route::post('/logout', [LoginController::class, 'logout']);
 
+Auth::routes(['verify' => true]);
 Route::get('/register', [RegisterController::class, 'index']);
 Route::post('/register', [RegisterController::class, 'store']);
 
@@ -77,9 +79,9 @@ Route::resource('siswa', SiswaController::class);
 
 Route::post('/materi-done/{id}', [ProcessController::class, 'markMaterialDone'])->name('materi.done');
 
-// Auth::routes();
+Auth::routes();
 
-// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+//Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('forgot-password', [ForgotPasswordController::class, 'showLinkRequestForm'])->name('password.request');
 Route::post('forgot-password', [ForgotPasswordController::class, 'sendResetLinkEmail'])->name('password.email');

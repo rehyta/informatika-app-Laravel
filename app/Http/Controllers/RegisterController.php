@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\facades\Hash;
+use App\Mail\RegistrationEmail;
+use Illuminate\Support\Facades\Mail;
 
 class RegisterController extends Controller
 {
@@ -29,7 +31,11 @@ class RegisterController extends Controller
 
         $validateData['password']=Hash::make($validateData['password']);
 
-        User::create($validateData);
+        $user = User::create($validateData);
+
+        Mail::to($user->email)->send(new RegistrationEmail($user));
+
+        $user->sendEmailVerificationNotification();
 
         return redirect('/login')->with('success', 'Registration done! please login');
     }
