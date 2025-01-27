@@ -28,7 +28,7 @@ class MaterialSeeder extends Seeder
                     4. tombol run <br>
                     5. tombol submit <br>
                 </p>
-                <img src="/img/petunjuk.png" width="600" height="300">
+                <img src="/img/petunjuk.png" class="img-fluid" height="300">
                 <p>
                     <b>kotak instruksi</b> adalah kotak yang akan memberikan instruksi tugas. biasanya berisi soal cerita yang harus dijabarkan dalam bentuk kode. <br>
                     <b>area input</b> ini adalah kotak dimana kita akan mengetik kodingan kita <br>
@@ -149,28 +149,24 @@ class MaterialSeeder extends Seeder
             'prompt' => "kita akan mempelajari bagaimana struktur dasar C++",
             'soal'=>'
                 <p> Seperti program "hello world",
-                    <div class="contohbox border m-3" style="border-radius: 15px">
-                        <div class="box m-1 bg-light" >
-                            <pre>
-                                #include <iostream>
-                                    using namespace std;
-                                    
-                                    int main() {
-                                        cout << "Hello World!";
-                                        return 0;
-                                    }
-                            </pre>
-                        </div>
+                    <div class="box m-1 bg-light" >
+                        <pre>
+                            #include < iostream >
+                                using namespace std;
+                            
+                                  int main() {
+                                    cout << "Hello World!";
+                                    return 0;
+                                }
+                        </pre>
                     </div>
                     Buatlah program di kotak input dengan code yang akan menghasilkan output :
-                    <div class="contohbox border m-3" style="border-radius: 15px">
                         <div class="box m-1 bg-light" >
                             <pre>
                                 saya sedang belajar informatika
                                 saya belajar dasar pemrograman
                             </pre>
                         </div>
-                    </div>
                     setelah menulis kode, klik tombol <b>RUN</b> yang ada diatas kotak input untuk 
                     menjalankan kode anda dan lihatlah hasil yang muncul di kotak output
                 </p>
@@ -190,9 +186,7 @@ class MaterialSeeder extends Seeder
                         <br>
                         3. Bagian fungsi <br> 
                     </p> <br>
-                    <div class="contohbox bg-secondary p-1" style="border-radius: 15px">
-                        <h5 class="mx-5 my-2">Contohnya seperti ini :</h5>
-                        <div class="box m-5 bg-light" >
+                        <div class="box m-1 bg-light" >
                             <pre>
                                 #include < iostream >
                                 
@@ -204,7 +198,6 @@ class MaterialSeeder extends Seeder
                                 }
                             </pre>
                         </div>
-                    </div>
                     <p>
                         <ul class="list-group list-group-flush">
                             <li class="list-group-item"><b> Bagian Include</b> Bagian ini mendefinisikan <i>library</i> apa saja yang akan digunakan dalam program. 
@@ -219,9 +212,7 @@ class MaterialSeeder extends Seeder
                             <li class="list-group-item"><b>Bagian fungsi</b> Bagian ini adalah bagian utama yang bersifat wajib. ini adalah bagian terpenting. disinilah kita akan menulis kode program.
                             <br> pada contoh diatas, kita menggunakan fungsi <u>main.</u>
                             fungsi <mark>main()</mark> adalah fungsi yang akan dieksekusi pertama saat program dibuka. selain fungsi <mark>main()</mark> kita bisa membuat fungsi lain.<br>
-                            <div class="contohbox bg-secondary p-1" style="border-radius: 15px">
-                                <h5 class="mx-5 my-2">Contohnya seperti ini :</h5>
-                                <div class="box m-5 bg-light" >
+                                <div class="box m-1 bg-light" >
                                     <pre>
                                         #include < iostream >
                                             using namespace std;
@@ -236,7 +227,6 @@ class MaterialSeeder extends Seeder
                                             }
                                     </pre>
                                 </div>
-                            </div>
                             </li>
                         </ul>
                     </p>
@@ -245,9 +235,8 @@ class MaterialSeeder extends Seeder
                 <div class="mt-3" style="font-size: 16px"> 
                     <h2 style="font-size: 20">PENULISAN STATEMENT DAN KONDISI</h2>
                     <p>Statement dan kondisi adalah kumpulan kode yang ditulis dalam bagian fungsi</p>
-                    <div class="contohbox bg-secondary p-1" style="border-radius: 15px">
-                        <h5 class="mx-5 my-2">Contohnya seperti ini :</h5>
-                        <div class="box m-5 bg-light" >
+                    
+                        <div class="box m-1 bg-light" >
                             <pre>
                                 #include < iostream >
                                     using namespace std;
@@ -260,16 +249,14 @@ class MaterialSeeder extends Seeder
                                     }
                             </pre>
                         </div>
-                    </div>
+                    
                 </div>
                 
                 <div class="mt-3" style="font-size: 16px"> 
                     <h2 style="font-size: 20">PENULISAN KOMENTAR</h2>
                     <p>Komentar adalah bagian kode yang akan diabaikan dalam eksekusi. Ada dua cara menulis komentar dalam C++ : <br>
                     1. menggunakan garis miring double (//) ini digunakan untuk memberikan komentar yang cuma sebaris</p>
-                    <div class="contohbox bg-secondary p-1" style="border-radius: 15px">
-                        <h5 class="mx-5 my-2">Contohnya seperti ini :</h5>
-                        <div class="box m-5 bg-light" >
+                        <div class="box m-1 bg-light" >
                             <pre>
                                 #include < iostream >
                                     using namespace std;
@@ -280,11 +267,9 @@ class MaterialSeeder extends Seeder
                                     }
                             </pre>
                         </div>
-                    </div>
+                    
                     2. menggunakan garis miring bintang (/**/) ini digunakan untuk memberikan komentar yang lebih dari sebaris</p>
-                    <div class="contohbox bg-secondary p-1" style="border-radius: 15px">
-                        <h5 class="mx-5 my-2">Contohnya seperti ini :</h5>
-                        <div class="box m-5 bg-light" >
+                        <div class="box m-1 bg-light" >
                             <pre>
                                 #include < iostream >
                                     using namespace std;
@@ -299,7 +284,7 @@ class MaterialSeeder extends Seeder
                                     }
                             </pre>
                         </div>
-                    </div>
+                    
                 </div>'
         ]);
 
@@ -311,167 +296,159 @@ class MaterialSeeder extends Seeder
             'prompt' => "kita akan mempelajari bagaimana membuat variable menyesuaikan tipe data dalam bahasa pemrograman",
             'soal'=>'
                 <p> Buatlah program dengan variable ketentuan seperti :
-                    <div class="contohbox border" style="border-radius: 15px">
-                        <div class="box m-5 bg-light" >
+                        <div class="box m-1 bg-light" >
                             <pre>
                                 nama : Suwarno
                                 pekerjaan : petani
                                 lama bekerja : 12 tahun
                             </pre>
                         </div>
-                    </div>
                     Buatlah output menjadi :
-                    <div class="contohbox border" style="border-radius: 15px">
                         <div class="box m-5 bg-light" >
                             <pre>
                                 "Nama beliau Pak Suwarno. 
                                 Beliau bekerja sebagai petani selama 12 tahun."
                             </pre>
                         </div>
-                    </div>
                 </p>',
             'slug' => 'variable-dan-tipe-data',
             'content' => '<div class="container md-4 m-3">
-            <div class="opening">
-                <h2 style="font-size: 32px">Variable dan Tipe Data</h2>
-                <p>Kita sudah belajar bagaimana menampilkan output. sekarang, bagaimana kalau kita mulai belajar
-                    tentang pemberian <a href="#variable">variable,</a> dan <a href="#tipeData">Tipe Data</a> pada program?
-                </p>
-            </div>
-        
-        
-            <div id="variable" style="font-size: 16px">
-                <h2 style="font-size: 32px">Variable</h2>
-                <p>jika diibaratkan sesuatu, Variable bisa diibaratkan seperti suatu "wadah" yang menyimpan data. coba bayangkan sebuah keranjang buah.
-                    kemudian, bayangkan di dalam keranjang itu adalah berbagai jenis buah. dalam perumpaan ini, keranjang adalah variable dan buah-buahan adalah data. <br>
-                    jika dituliskan dalam data, contoh tersebut bisa dibuat seperti ini : <br>
-                    <div class="contohbox border p-0" style="border-radius: 15px">
-                        <div class="box bg-light" >
-                            <pre>
-            
-                                keranjang = apel, jeruk, pisang, melon
-                            </pre>
-                        </div>
-                    </div>
-                    namun dalam bahasa C++, ada aturan yang mengharuskan adanya penulisan <a href="#tipeData">Tipe Data</a> pada program. Jadi, aturan penulisan variable dalam C++ itu adalah
-                    <br>
-                    <div class="contohbox border p-0" style="border-radius: 15px">
-                        <div class="box bg-light" >
-                            <pre>
-                                
-                                TipeData NamaVariable = Data ;
-                            </pre>
-                        </div>
-                    </div>
-                    <div class="m-3 p-3 bg-info bg-opacity-10 border border-info">
-                        <p>jangan lupa selalu mengakhiri statement dengan titik koma (;)</p>
-                    </div>
-                </p>
-            </div>
-            
-            <div id="tipeData" style="font-size: 16px">
-                <h2 style="font-size: 32px">Tipe Data</h2>
-                <p>jika diibaratkan sesuatu, Variable bisa diibaratkan seperti suatu "wadah" yang menyimpan data. coba bayangkan sebuah keranjang buah.
-                    kemudian, bayangkan di dalam keranjang itu adalah berbagai jenis buah. dalam perumpaan ini, keranjang adalah variable dan buah-buahan adalah data. <br>
-                    jika dituliskan dalam data, contoh tersebut bisa dibuat seperti ini : <br>
-                    <div class="contohbox border p-0" style="border-radius: 15px">
-                        <div class="box bg-light" >
-                            <pre>
-            
-                                keranjang = apel, jeruk, pisang, melon
-                            </pre>
-                        </div>
-                    </div>
-                    namun dalam bahasa C++, ada aturan yang mengharuskan adanya penulisan <a href="#tipeData">Tipe Data</a> lebih dulu, lalu diikuti nama variablenya. Jadi, aturan penulisan variable dalam C++ itu adalah :
-                    <br>
-                    <div class="contohbox border p-0" style="border-radius: 15px">
-                        <div class="box bg-light" >
-                            <pre>
-                                
-                                TipeData NamaVariable = Data ;
-                            </pre>
-                        </div>
-                    </div>
-                    <p>macam-macam tipe data yang umum digunakan bisa kita lihat pada tabel berikut. <br>
-                        <table class="table">
-                            <thead>
-                            <tr>
-                                <th scope="col">Nama tipe data</th>
-                                <th scope="col">Ukuran dalam Memori</th>
-                                <th scope="col">Rentang Nilai</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <td>Char</td>
-                                <td>1 byte</td>
-                                <td>-127 sampai 127 atau 0 sampai 255</td>
-                            </tr>
-                            <tr>
-                                <td>int</td>
-                                <td>4 bytes</td>
-                                <td>-2147483648 sampai 2147483647</td>
-                            </tr>
-                            <tr>
-                                <td>float</td>
-                                <td>4 bytes</td>
-                                <td>+/- 3.4e +/- 38 (~7 digits)</td>
-                            </tr>
-                            <tr>
-                                <td>double</td>
-                                <td>8 bytes</td>
-                                <td>+/- 1.7e +/- 308 (~15 digits)</td>
-                            </tr>
-                            <tr>
-                                <td>boolean</td>
-                                <td>4 bytes</td>
-                                <td><mark>true</mark> or <mark>false</mark></td>
-                            </tr>
-            
-                            </tbody>
-                        </table>
+                <div class="opening">
+                    <h2 style="font-size: 32px">Variable dan Tipe Data</h2>
+                    <p>Kita sudah belajar bagaimana menampilkan output. sekarang, bagaimana kalau kita mulai belajar
+                        tentang pemberian <a href="#variable">variable,</a> dan <a href="#tipeData">Tipe Data</a> pada program?
                     </p>
-                    <div class="m-3 p-3 bg-info bg-opacity-10 border border-info">
-                        <p>kita bisa menggunakan tipe data <i>auto</i> sebagai placeholder untuk tipe data yang belum jelas</p>
-                    </div>
-                    <div class="m-3 p-3 bg-info bg-opacity-10 border border-info">
-                        <p>jangan lupa selalu mengakhiri statement dengan titik koma (;)</p>
-                    </div>
-                </p>
-            </div>
-            
-            <div class="contoh">
-            
-                    <div class="contohbox bg-secondary p-1" style="border-radius: 15px">
-                        <h5 class="mx-5 my-2">Contohnya jika memasukkan program :</h5>
-                        <div class="box m-5 bg-light" >
-                            <pre>
-                                #include <iostream>
-            
-                                    using namespace std;
-                                    
-                                    int main(){
-                                    
-                                    // deklarasi tipe data variabel
-                                    string nama = "Bu Rudi";
-                                    int umur = 43;
-                                    
-                                    
-                                    // --- proses output ---
-                                    cout << "Halo" << nama << " Selamat ulang tahun yang ke-";
-                                    cout << umur << endl;
-                                    
-                                    return 0;
-                                    
-                                    }
-                            </pre>
-                        </div>
-                    </div>
-                    <p>maka akan muncul output : </p>
-                    <pre> Halo Bu Rudi Selamat ulang tahun yang ke-43</pre>
-                    <p>ini dikarenakan variable nama menyimpan data berupa string "Bu Rudi" dan variable umur menyimpan data berupa interger (int) berupa angka 43 </p>
                 </div>
-            </div>'
+            
+            
+                <div id="variable" style="font-size: 16px">
+                    <h2 style="font-size: 32px">Variable</h2>
+                    <p>jika diibaratkan sesuatu, Variable bisa diibaratkan seperti suatu "wadah" yang menyimpan data. coba bayangkan sebuah keranjang buah.
+                        kemudian, bayangkan di dalam keranjang itu adalah berbagai jenis buah. dalam perumpaan ini, keranjang adalah variable dan buah-buahan adalah data. <br>
+                        jika dituliskan dalam data, contoh tersebut bisa dibuat seperti ini : <br>
+                            <div class="box bg-light" >
+                                <pre>
+                
+                                    keranjang = apel, jeruk, pisang, melon
+                                </pre>
+                            </div>
+                       
+                        namun dalam bahasa C++, ada aturan yang mengharuskan adanya penulisan <a href="#tipeData">Tipe Data</a> pada program. Jadi, aturan penulisan variable dalam C++ itu adalah
+                        <br>
+                            <div class="box bg-light" >
+                                <pre>
+                                    
+                                    TipeData NamaVariable = Data ;
+                                </pre>
+                            </div>
+                        
+                        <div class="m-3 p-3 bg-info bg-opacity-10 border border-info">
+                            <p>jangan lupa selalu mengakhiri statement dengan titik koma (;)</p>
+                        </div>
+                    </p>
+                </div>
+                
+                <div id="tipeData" style="font-size: 16px">
+                    <h2 style="font-size: 32px">Tipe Data</h2>
+                    <p>jika diibaratkan sesuatu, Variable bisa diibaratkan seperti suatu "wadah" yang menyimpan data. coba bayangkan sebuah keranjang buah.
+                        kemudian, bayangkan di dalam keranjang itu adalah berbagai jenis buah. dalam perumpaan ini, keranjang adalah variable dan buah-buahan adalah data. <br>
+                        jika dituliskan dalam data, contoh tersebut bisa dibuat seperti ini : <br>
+                            <div class="box bg-light" >
+                                <pre>
+                
+                                    keranjang = apel, jeruk, pisang, melon
+                                </pre>
+                            </div>
+                        
+                        namun dalam bahasa C++, ada aturan yang mengharuskan adanya penulisan <a href="#tipeData">Tipe Data</a> lebih dulu, lalu diikuti nama variablenya. Jadi, aturan penulisan variable dalam C++ itu adalah :
+                        <br>
+                            <div class="box bg-light" >
+                                <pre>
+                                    
+                                    TipeData NamaVariable = Data ;
+                                </pre>
+                            </div>
+                        
+                        <p>macam-macam tipe data yang umum digunakan bisa kita lihat pada tabel berikut. <br>
+                            <table class="table">
+                                <thead>
+                                <tr>
+                                    <th scope="col">Nama tipe data</th>
+                                    <th scope="col">Ukuran dalam Memori</th>
+                                    <th scope="col">Rentang Nilai</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>Char</td>
+                                    <td>1 byte</td>
+                                    <td>-127 sampai 127 atau 0 sampai 255</td>
+                                </tr>
+                                <tr>
+                                    <td>int</td>
+                                    <td>4 bytes</td>
+                                    <td>-2147483648 sampai 2147483647</td>
+                                </tr>
+                                <tr>
+                                    <td>float</td>
+                                    <td>4 bytes</td>
+                                    <td>+/- 3.4e +/- 38 (~7 digits)</td>
+                                </tr>
+                                <tr>
+                                    <td>double</td>
+                                    <td>8 bytes</td>
+                                    <td>+/- 1.7e +/- 308 (~15 digits)</td>
+                                </tr>
+                                <tr>
+                                    <td>boolean</td>
+                                    <td>4 bytes</td>
+                                    <td><mark>true</mark> or <mark>false</mark></td>
+                                </tr>
+                
+                                </tbody>
+                            </table>
+                        </p>
+                        <div class="m-3 p-3 bg-info bg-opacity-10 border border-info">
+                            <p>kita bisa menggunakan tipe data <i>auto</i> sebagai placeholder untuk tipe data yang belum jelas</p>
+                        </div>
+                        <div class="m-3 p-3 bg-info bg-opacity-10 border border-info">
+                            <p>jangan lupa selalu mengakhiri statement dengan titik koma (;)</p>
+                        </div>
+                    </p>
+                </div>
+                
+                <div class="contoh">
+                
+                        
+                           
+                            <div class="box m-1 bg-light" >
+                                <pre>
+                                    #include < iostream >
+                
+                                        using namespace std;
+                                        
+                                        int main(){
+                                        
+                                        // deklarasi tipe data variabel
+                                        string nama = "Bu Rudi";
+                                        int umur = 43;
+                                        
+                                        
+                                        // --- proses output ---
+                                        cout << "Halo" << nama << " Selamat ulang tahun yang ke-";
+                                        cout << umur << endl;
+                                        
+                                        return 0;
+                                        
+                                        }
+                                </pre>
+                            </div>
+                        
+                        <p>maka akan muncul output : </p>
+                        <pre> Halo Bu Rudi Selamat ulang tahun yang ke-43</pre>
+                        <p>ini dikarenakan variable nama menyimpan data berupa string "Bu Rudi" dan variable umur menyimpan data berupa interger (int) berupa angka 43 </p>
+                    </div>
+                </div>'
         ]);
 
 
@@ -482,18 +459,16 @@ class MaterialSeeder extends Seeder
             'prompt' => "kita akan mempelajari bagaimana penggunaan operator dan aritmatika dalam bahasa pemrograman",
             'soal'=>'
                 <p> Seperti program dengan ketentuan :
-                    <div class="contohbox border" style="border-radius: 15px">
-                        <div class="box m-5 bg-light" >
-                            <p>
+                        <div class="box m-1 bg-light" >
+                            <pre>
                                 jarak rumah ke sekolah = 12 KM <br>
                                 waktu tempuh = 30 menit
-                            </p>
+                            </pre>
                         </div>
-                    </div>
+                    
                     Buatlah program dengan hasil output berupa kecepatannya!
-                    <div class="contohbox border" style="border-radius: 15px">
-                        <div class="box m-5 bg-light" >
-                            <p>
+                        <div class="box m-1 bg-light" >
+                            <pre>
                                 #include _______________
                                 #include <string>  // Untuk menggunakan std::string
                                 using namespace std;
@@ -508,185 +483,67 @@ class MaterialSeeder extends Seeder
                                     return 0;
                                 }
                                 
-                            </p>
+                            </pre>
                         </div>
-                    </div>
+                    
                 </p>',
             'slug' => 'operator-dan-aritmatika',
             'content' =>'
-                    <div class = "container">
-                        <div class="opening">
-                            <h2 style="font-size: 32px">Operator dan Aritmatika</h2>
-                            <p>Kita sudah belajar bagaimana membuat variable. Sekarang, bagaimana cara menerapkannya itu dalam <a href="#operator">variable,</a> dan <a href="#aritmatika">aritmatika</a>?</p>
-                        </div>
-                        <h2 style="font-size: 20px">OPERATOR</h2>
-                        <p>
-                            <b>apa sih operator itu?</b>
-                            <br>
-                            Operator itu sebuah simbol. simbol yang digunakan untuk mempermudah operasi tertentu. <br>
-                            misal : <br>
-                            <div class="contohbox border" style="border-radius: 15px">
-                                <div class="box m-5 bg-light" >
-                                    <pre>
-                                        x > y
-                                    </pre>
-                                </div>
+                <div class = "container">
+                    <div class="opening">
+                        <h2 style="font-size: 32px">Operator dan Aritmatika</h2>
+                        <p>Kita sudah belajar bagaimana membuat variable. Sekarang, bagaimana cara menerapkannya itu dalam <a href="#operator">variable,</a> dan <a href="#aritmatika">aritmatika</a>?</p>
+                    </div>
+                    <h2 style="font-size: 20px">OPERATOR</h2>
+                    <p>
+                        <b>apa sih operator itu?</b>
+                        <br>
+                        Operator itu sebuah simbol. simbol yang digunakan untuk mempermudah operasi tertentu. <br>
+                        misal : <br>
+                            <div class="box m-1 bg-light" >
+                                <pre>
+                                    x > y
+                                </pre>
                             </div>
-                            Operator bisa digunakan untuk membandingkan dua nilai variable. misalnya: <br>
-                            <div class="contohbox p-1" style="border-radius: 15px">
-                                <h5 class="mx-5 my-2">Contohnya seperti ini :</h5>
-                                <div class="box m-5 bg-light" >
-                                    <pre>
-                                        #include <iostream>
-                                            using namespace std;
-                                            
-                                            int main(){
-                                                int a = 4, b = 3;
-                                                bool hasil;
-                                            
-                                                cout << "a = " << a << endl;
-                                                cout << "b = " << b << endl;
-                                            
-                                                // menggunakan operator pembanding
-                                                hasil = a > b;
-                                                cout << "a > b = " << hasil << endl;
-                                            
-                                                hasil = a < b;
-                                                cout << "a < b = " << hasil << endl;
-                                            
-                                            
-                                                return 0;
-                                            }
-                                    </pre>
-                                </div>
-                            </div>
-                            maka output yang dikeluarkan akan seperti ini : <br>
-                            <div class="contohbox border" style="border-radius: 15px">
-                                <div class="box m-5 bg-light" >
-                                    <pre>
-                                        a = 4
-                                        b = 3
-                                        a > b = 1
-                                        a < b = 0
                         
-                                    </pre>
-                                </div>
+                        Operator bisa digunakan untuk membandingkan dua nilai variable. misalnya: <br>
+                            <div class="box m-1 bg-light" >
+                                <pre>
+                                    #include < iostream >
+                                        using namespace std;
+                                        
+                                        int main(){
+                                            int a = 4, b = 3;
+                                            bool hasil;
+                                        
+                                            cout << "a = " << a << endl;
+                                            cout << "b = " << b << endl;
+                                        
+                                            // menggunakan operator pembanding
+                                            hasil = a > b;
+                                            cout << "a > b = " << hasil << endl;
+                                        
+                                            hasil = a < b;
+                                            cout << "a < b = " << hasil << endl;
+                                        
+                                        
+                                            return 0;
+                                        }
+                                </pre>
+                            </div>
+                        maka output yang dikeluarkan akan seperti ini : <br>
+                            <div class="box m-1 bg-light" >
+                                <pre>
+                                    a = 4
+                                    b = 3
+                                    a > b = 1
+                                    a < b = 0
+                    
+                                </pre>
                             </div> 
-                            nilai 1 yang dihasilkan dari <mark>a > b = 1</mark> artinya bahwa <mark>a > b </mark> bernilai true (1). 
-                            sementara <mark>a < b = 0</mark> bernilai false (0) <br>
-                            simbol yang digunakan dalam operasi ini bisa menggunakan : <br>
-                            <table class="table">
-                                <thead>
-                                <tr>
-                                    <th scope="col">Simbol</th>
-                                    <th scope="col">Nama Operator</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <td>></td>
-                                    <td>Lebih besar</td>
-                                </tr>
-                                <tr>
-                                    <td><</td>
-                                    <td>Lebih kecil</td>
-                                </tr>
-                                <tr>
-                                    <td>==</td>
-                                    <td>Sama dengan</td>
-                                </tr>
-                                <tr>
-                                    <td>!=</td>
-                                    <td>Tidak sama dengan</td>
-                                </tr>
-                                <tr>
-                                    <td>>=</td>
-                                    <td>Lebih besar Sama dengan</td>
-                                </tr>
-                                <tr>
-                                    <td><=</td>
-                                    <td>Lebih kecil Sama dengan</td>
-                                </tr>
-                                </tbody>
-                            </table>
-                        
-                            Selain untuk perbandingan, operator juga bisa digunakan untuk menerapkan konsep logika matematika. <br>
-                            <table class="table">
-                                <thead>
-                                <tr>
-                                    <th scope="col">Simbol</th>
-                                    <th scope="col">Nama Operator</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <td>&&</td>
-                                    <td>Logika AND</td>
-                                </tr>
-                                <tr>
-                                    <td>||</td>
-                                    <td>Logika OR</td>
-                                </tr>
-                                <tr>
-                                    <td>!</td>
-                                    <td>Negasi/Kebalikan</td>
-                                </tr>
-                                </tbody>
-                            </table>
-                            Misalnya seperti ini : <br>
-                            <div class="contohbox p-1" style="border-radius: 15px">
-                                <h5 class="mx-5 my-2">Contohnya seperti ini :</h5>
-                                <div class="box m-5 bg-light" >
-                                    <pre>
-                                        #include <iostream>
-                                            using namespace std;
-                                            
-                                            int main(){
-                                                int a = 1; // true
-                                                int b = 0; // false
-                                                bool hasil;
-                                            
-                                                cout << "a = " << a << endl;
-                                                cout << "b = " << b << endl;
-                                            
-                                                // logika AND
-                                                hasil = a && b;
-                                                cout << "a && b = " << hasil << endl;
-                                            
-                                                // logika OR
-                                                hasil = a || b;
-                                                cout << "a || b = " << hasil << endl;
-                                            
-                                                // logika NOT
-                                                cout << "!a = " << !a << endl;
-                                            
-                                                return 0;
-                                            }
-                                    </pre>
-                                </div>
-                            </div>
-                            hasilnya akan menjadi : <br>
-                            <div class="contohbox border" style="border-radius: 15px">
-                                <div class="box m-5 bg-light" >
-                                    <pre>
-                                        a = 1
-                                        b = 0
-                                        a && b = 1
-                                        a || b = 1
-                                        !a = 0
-                                    </pre>
-                                </div>
-                            </div>
-                            nilai 1 dihasilkan oleh pernyataan bersifat <mark>true</mark> dan 0 dikeluarkan oleh pernyataan bersifat <mark>false</mark>
-                        </p>
-                        </div>
-                        
-                        
-                        
-                        <div id="aritmatika" style="font-size: 16px">
-                        <p>
-                        <b>Bagaimana sih menggunakan aritmatika dengan variable?</b>
-                        Dalam program C++, operasi aritmatika bisa digunakan dengan menggunakan simbol : <br>
+                        nilai 1 yang dihasilkan dari <mark>a > b = 1</mark> artinya bahwa <mark>a > b </mark> bernilai true (1). 
+                        sementara <mark>a < b = 0</mark> bernilai false (0) <br>
+                        simbol yang digunakan dalam operasi ini bisa menggunakan : <br>
                         <table class="table">
                             <thead>
                             <tr>
@@ -696,140 +553,238 @@ class MaterialSeeder extends Seeder
                             </thead>
                             <tbody>
                             <tr>
-                                <td>+</td>
-                                <td>Penjumlahan</td>
+                                <td>></td>
+                                <td>Lebih besar</td>
                             </tr>
                             <tr>
-                                <td>-</td>
-                                <td>Pengurangan</td>
+                                <td><</td>
+                                <td>Lebih kecil</td>
                             </tr>
                             <tr>
-                                <td>*</td>
-                                <td>perkalian</td>
+                                <td>==</td>
+                                <td>Sama dengan</td>
                             </tr>
                             <tr>
-                                <td>/</td>
-                                <td>Pembagian</td>
+                                <td>!=</td>
+                                <td>Tidak sama dengan</td>
                             </tr>
                             <tr>
-                                <td>%</td>
-                                <td>Sisa Bagi</td>
+                                <td>>=</td>
+                                <td>Lebih besar Sama dengan</td>
+                            </tr>
+                            <tr>
+                                <td><=</td>
+                                <td>Lebih kecil Sama dengan</td>
                             </tr>
                             </tbody>
                         </table>
-                        Bagaimana cara pakainya? 
-                        <div class="contohbox p-1" style="border-radius: 15px">
-                            <h5 class="mx-5 my-2">Contohnya seperti ini :</h5>
-                            <div class="box m-5 bg-light" >
+                    
+                        Selain untuk perbandingan, operator juga bisa digunakan untuk menerapkan konsep logika matematika. <br>
+                        <table class="table">
+                            <thead>
+                            <tr>
+                                <th scope="col">Simbol</th>
+                                <th scope="col">Nama Operator</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>&&</td>
+                                <td>Logika AND</td>
+                            </tr>
+                            <tr>
+                                <td>||</td>
+                                <td>Logika OR</td>
+                            </tr>
+                            <tr>
+                                <td>!</td>
+                                <td>Negasi/Kebalikan</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        Misalnya seperti ini : <br>
+                            <div class="box m-1 bg-light" >
                                 <pre>
-                                    #include <iostream>
+                                    #include < iostream >
                                         using namespace std;
                                         
                                         int main(){
+                                            int a = 1; // true
+                                            int b = 0; // false
+                                            bool hasil;
                                         
-                                            int a, b, c;
-                                            a = 3;
-                                            b = 4;
+                                            cout << "a = " << a << endl;
+                                            cout << "b = " << b << endl;
                                         
-                                            // menggunakan operator penjumlahan
-                                            c = a + b;
+                                            // logika AND
+                                            hasil = a && b;
+                                            cout << "a && b = " << hasil << endl;
                                         
-                                            cout << "Hasil a + b = " << c << endl;
+                                            // logika OR
+                                            hasil = a || b;
+                                            cout << "a || b = " << hasil << endl;
+                                        
+                                            // logika NOT
+                                            cout << "!a = " << !a << endl;
                                         
                                             return 0;
                                         }
                                 </pre>
                             </div>
-                        </div>
-                        maka hasilnya :
-                        <div class="contohbox border" style="border-radius: 15px">
-                            <div class="box m-5 bg-light" >
+                        hasilnya akan menjadi : <br>
+                            <div class="box m-1 bg-light" >
                                 <pre>
-                                    Hasil a + b =7
+                                    a = 1
+                                    b = 0
+                                    a && b = 1
+                                    a || b = 1
+                                    !a = 0
                                 </pre>
                             </div>
+                        
+                        nilai 1 dihasilkan oleh pernyataan bersifat <mark>true</mark> dan 0 dikeluarkan oleh pernyataan bersifat <mark>false</mark>
+                    </p>
+                    
+                    
+                    
+                    <div id="aritmatika" style="font-size: 16px">
+                    <p>
+                    <b>Bagaimana sih menggunakan aritmatika dengan variable?</b>
+                    Dalam program C++, operasi aritmatika bisa digunakan dengan menggunakan simbol : <br>
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th scope="col">Simbol</th>
+                            <th scope="col">Nama Operator</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>+</td>
+                            <td>Penjumlahan</td>
+                        </tr>
+                        <tr>
+                            <td>-</td>
+                            <td>Pengurangan</td>
+                        </tr>
+                        <tr>
+                            <td>*</td>
+                            <td>perkalian</td>
+                        </tr>
+                        <tr>
+                            <td>/</td>
+                            <td>Pembagian</td>
+                        </tr>
+                        <tr>
+                            <td>%</td>
+                            <td>Sisa Bagi</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    Bagaimana cara pakainya
+                        <div class="box m-1 bg-light" >
+                            <pre>
+                                #include < iostream >
+                                    using namespace std;
+                                    
+                                    int main(){
+                                    
+                                        int a, b, c;
+                                        a = 3;
+                                        b = 4;
+                                    
+                                        // menggunakan operator penjumlahan
+                                        c = a + b;
+                                    
+                                        cout << "Hasil a + b = " << c << endl;
+                                    
+                                        return 0;
+                                    }
+                            </pre>
                         </div>
-                        <div class="m-3 p-3 bg-info bg-opacity-10 border border-info">
-                            <p>Dalam kode, apabila menggunakan tanda petik ("") saat menulis data, sistem akan membacanya sebagai nilai string.
-                                <br>
-                                misal :
-                                <div class="contohbox border" style="border-radius: 15px">
-                                    <div class="box m-5 bg-light" >
-                                        <pre>
-                                            a = 4 + 4;
-                                            b = "4" + "2";
-                                            c = "4" + 1 + 2
-                                        </pre>
-                                    </div>
-                                </div>
-                                hasilnya akan seperti : 
-                                <div class="contohbox border" style="border-radius: 15px">
-                                    <div class="box m-5 bg-light" >
-                                        <pre>
-                                            a = 8
-                                            b = 42
-                                            c = 43
-                                        </pre>
-                                    </div>
-                                </div>
-                            </p>
+                    </div>
+                    maka hasilnya 
+                        <div class="box m-1 bg-light" >
+                            <pre>
+                                Hasil a + b =7
+                            </pre>
                         </div>
+                    
+                    <div class="m-3 p-3 bg-info bg-opacity-10 border border-info">
+                        <p>Dalam kode, apabila menggunakan tanda petik ("") saat menulis data, sistem akan membacanya sebagai nilai string.
+                            <br>
+                            misal :
+
+                                <div class="box m-1 bg-light" >
+                                    <pre>
+                                        a = 4 + 4;
+                                        b = "4" + "2";
+                                        c = "4" + 1 + 2
+                                    </pre>
+                                </div>
+                            </div>
+                            hasilnya akan seperti : 
+
+                                <div class="box m-1 bg-light" >
+                                    <pre>
+                                        a = 8
+                                        b = 42
+                                        c = 43
+                                    </pre>
+                                </div>
+                            
                         </p>
-                        </div>
-                        
-                        
-                        
-                        
-                        
-                        <div class="contoh">
-                            <p>Apabila kita menggunakan int, artinya tipe data akan dibaca secara interger</p>
+                    
+                    </p>
+
+                    <div class="contoh">
+                        <p>Apabila kita menggunakan int, artinya tipe data akan dibaca secara interger</p>
+                        <pre>
+                            #include < iostream >
+                                using namespace std;
+                                
+                                int main() {
+                                    int A = 2;
+                                    int B = 3;
+                                    C = A + B;
+                    
+                                    cout << C;
+                    
+                                    return 0;
+                                }
+                        </pre>
+                        <p>outputnya adalah :
                             <pre>
-                                #include < iostream>
-                                    using namespace std;
-                                    
-                                    int main() {
-                                        int A = 2;
-                                        int B = 3;
-                                        C = A + B;
-                        
-                                        cout << C;
-                        
-                                        return 0;
-                                    }
+                                5
                             </pre>
-                            <p>outputnya adalah :
-                                <pre>
-                                    5
-                                </pre>
-                            </p>
-                            <p>namun, apabila pakai tipe data char, data akan dibaca char</p>
-                            <pre>
-                                #include < iostream>
-                                    using namespace std;
-                                    
-                                    int main() {
-                                        char A = 2;
-                                        char B = 3;
-                                        C = A+B;
-                        
-                                        cout << A;
-                        
-                                        return 0;
-                                    }
+                        </p>
+                        <p>namun, apabila pakai tipe data char, data akan dibaca char</p>
+                        <pre>
+                            #include < iostream >
+                                using namespace std;
+                                
+                                int main() {
+                                    char A = 2;
+                                    char B = 3;
+                                    C = A+B;
+                    
+                                    cout << A;
+                    
+                                    return 0;
+                                }
+                        </pre>
+                        <p>outputnya adalah :
+                            <pre> 
+                                23 
                             </pre>
-                            <p>outputnya adalah :
-                                <pre> 
-                                    23 
-                                </pre>
-                            </p>
-                            <p>berbeda kan?</p>
-                        </div>
-                        
+                        </p>
+                        <p>berbeda kan?</p>
+                    </div>
+                    
                         <div class="tugas">
                             <p>buatlah variable A, B, C dan variable D yang berisi variable ABC.</p>
                         </div>
-                        </div>
-                    </div>',
+                </div>',
         ]);
 
 
@@ -843,9 +798,8 @@ class MaterialSeeder extends Seeder
 
                     Buatlah program sederhana dalam bahasa pemrograman C++ untuk membantu Andi menentukan apakah 
                     dia lulus atau tidak. Program harus menampilkan pesan "Anda lulus!" jika nilai lebih besar atau 
-                    sama dengan nilai KKM, atau pesan "Anda tidak lulus." jika nilai kurang dari KKM.
-                    <div class="contohbox border" style="border-radius: 15px">
-                        <div class="box m-5 bg-light" >
+                    sama dengan nilai KKM, atau pesan "Anda tidak lulus." jika nilai kurang dari KK
+                        <div class="box m-1 bg-light" >
                             <pre>
                                 #include <iostream>
                                     using _______________;
@@ -870,128 +824,104 @@ class MaterialSeeder extends Seeder
                 </p>',
             'slug' => 'kondisi-dan-percabangan-opening',
             'content' =>' 
-            <div class="container md-4 m-3">
-                <div class="opening">
-                    <h2 style="font-size: 32px">Operator dan Aritmatika</h2>
-                    <p>Kita sudah belajar fungsi Operator dan aritmatika. Sekarang, bagaimana cara menerapkannya itu dalam kondisi dan percabangan?
-                   </p>
-                </div>
-        
-                <p> Ketika kita dihadapkan dengan pengambilan suatu keputusan, tentunya kita harus evaluasi terlebih dahulu pilihan-pilihan yang ada menyesuaikan kondisi.
-                di dalam bahasa pemrograman, pengambilan keputusan juga bisa menggunakan penerapan konsep <i>if-else.</i> konsep ini berlaku pada hampir
-                semua bahasa pemrograman.</p>
-                <b style="font-size: 20px">IF</b>
-                <p>
-                    <img src="/img/IF.png" width="400" height="500" alt="gambaran percabangan if">
-                    <br>
-                    IF bisa dianologikan seperti "jika memenuhi kondisi, lakukan A. jika tidak, tidak ada apa-apa". coba perhatikan
-                    contoh dibawah ini :
-                    <br>
-                    <div class="contohbox">
-                        <div class="box m-5 bg-light" style="box-shadow: 0 0 0 1px;" >
-                            <pre>
-                                #include < iostream >
-                                using namespace std;
-                                                    
-                                int main() {
-                                    int i = 7;
-                                    if (i = 7){
-                                    cout << "ini adalah angka tujuh";
-                                    return 0;
-                                    }
-                                }
-                            </pre>
-                        </div>
+                <div class="container md-4 m-3">
+                    <div class="opening">
+                        <h2 style="font-size: 32px">Kondisi dan Percabangan</h2>
+                        <p>Kita sudah belajar fungsi Operator dan aritmatika. Sekarang, bagaimana cara menerapkannya itu dalam kondisi dan percabangan?
+                    </p>
                     </div>
-                    <br>
-                    Jika dijalankan, program itu akan menghasilkan output :
-                    <div class="contohbox border">
-                        <div class="box m-5 bg-light" >
-                            <pre>
-                                ini adalah angka tujuh
-                            </pre>
-                        </div>
-                    </div>
-                </p>
-                <b style="font-size: 20px">IF... ELSE</b>               
-                <p>IF-ELSE bisa dianologikan dengan "jika memenuhi kondisi, lakukan A. jika tidak, lakukan B"
-                <br>
-                    <img src="/img/IF_ELSE.png" width="400" height="500" alt="gambaran percabangan if else">
-                    <br>
-                    Jika di buat dalam kode C++, kondisi ini bisa dibuat menjadi : <br>
-                    <div class="contohbox border">
-                        <div class="box m-5 bg-light" style="box-shadow: 0 0 0 1px;" >
-                            <pre>
-                                #include < iostream >
-                                using namespace std;
-                                                    
-                                int main() {
-                                    int i = 5;
-                                                        
-                                    if (i == 7){
-                                    cout << "ini adalah angka tujuh";
-                                    }else{
-                                    cout<< "ini bukan angka lima";
-                                    }
-                                return 0;
-                                                    }
-                            </pre>
-                        </div>
-                    </div>
-                    <br>
-                    Jika dijalankan, program itu akan menghasilkan output :
-                    <div class="contohbox border">
-                        <div class="box m-5 bg-light" style="box-shadow: 0 0 0 1px;" ></div>
-                            <pre>
-                                ini bukan angka lima
-                            </pre>
-                        </div>
-                    </div>
-                </p>
-                <b style="font-size: 20px">IF...ELSE IF...ELSE</b>
-                <p>Penerapan konstruksi ini, dapat direpresentasikan seperti "jika sesuatu 
-                memenuhi kondisi, lakukan A. jika tidak, lakukan pengecekan. apabila sesuati 
-                dengan kondisi B, lakukan B. jika tidak sama sekali, lakukan C"
-                <br>
-                jika dibuat dalam bentuk kode C++, kondisi ini bisa dibuat menjadi :
-                <br>
-                <img src="/img/IF_ELSE_IF.png" width="400" height="500" alt="gambaran percabangan if else">
-                <p>
-                        IF-ELSE bisa dianologikan dengan "jika memenuhi kondisi, lakukan A. jika tidak, lakukan B"
+            
+                    <p> Ketika kita dihadapkan dengan pengambilan suatu keputusan, tentunya kita harus evaluasi terlebih dahulu pilihan-pilihan yang ada menyesuaikan kondisi.
+                    di dalam bahasa pemrograman, pengambilan keputusan juga bisa menggunakan penerapan konsep <i>if-else.</i> konsep ini berlaku pada hampir
+                    semua bahasa pemrograman.</p>
+                    <b style="font-size: 20px">IF</b>
+                    <p>
+                        <img src="/img/IF.png" class="img-fluid" alt="gambaran percabangan if">
                         <br>
-                        Jika di buat dalam kode C++, kondisi ini bisa dibuat menjadi : <br>
-                        <div class="contohbox border">
-                            <div class="box bg-light" style="box-shadow: 0 0 0 1px;" >
+                        IF bisa dianologikan seperti "jika memenuhi kondisi, lakukan A. jika tidak, tidak ada apa-apa". coba perhatikan
+                        contoh dibawah ini :
+                        <br>
                                 <pre>
                                     #include < iostream >
                                     using namespace std;
-                                                    
-                                    int main() {
-                                        int i = 5;
                                                         
-                                        if (i == 3){
-                                            cout << "ini adalah angka tujuh";
-                                        }else if (i > 5){
-                                            cout<< "angka ini lebih besar dari lima";
-                                        }else{
-                                            cout<<"angka ini lebih kecil dari lima";
+                                    int main() {
+                                        int i = 7;
+                                        if (i = 7){
+                                        cout << "ini adalah angka tujuh";
+                                        return 0;
                                         }
-                                    return 0;
                                     }
                                 </pre>
-                            </div>
-                        </div    
                         <br>
                         Jika dijalankan, program itu akan menghasilkan output :
-                        <div class="contohbox border">
-                            <div class="box m-5 bg-light" style="box-shadow: 0 0 0 1px;" >
                                 <pre>
-                                    angka ini lebih kecil dari lima
+                                    ini adalah angka tujuh
                                 </pre>
-                            </div>
-                        </div>    
                     </p>
-            '
+                    <b style="font-size: 20px">IF... ELSE</b>               
+                    <p>IF-ELSE bisa dianologikan dengan "jika memenuhi kondisi, lakukan A. jika tidak, lakukan B"
+                    <br>
+                        <img src="/img/IF_ELSE.png" class="img-fluid" alt="gambaran percabangan if else">
+                        <br>
+                        Jika di buat dalam kode C++, kondisi ini bisa dibuat menjadi : <br>
+                                <pre>
+                                    #include < iostream >
+                                    using namespace std;
+                                                        
+                                    int main() {
+                                        int i = 5;
+                                                            
+                                        if (i == 7){
+                                        cout << "ini adalah angka tujuh";
+                                        }else{
+                                        cout<< "ini bukan angka lima";
+                                        }
+                                    return 0;
+                                                        }
+                                </pre>
+                        <br>
+                        Jika dijalankan, program itu akan menghasilkan output :
+                                <pre>
+                                    ini bukan angka lima
+                                </pre>
+                    </p>
+                    <b style="font-size: 20px">IF...ELSE IF...ELSE</b>
+                    <p>Penerapan konstruksi ini, dapat direpresentasikan seperti "jika sesuatu 
+                    memenuhi kondisi, lakukan A. jika tidak, lakukan pengecekan. apabila sesuati 
+                    dengan kondisi B, lakukan B. jika tidak sama sekali, lakukan C"
+                    <br>
+                    jika dibuat dalam bentuk kode C++, kondisi ini bisa dibuat menjadi :
+                    <br>
+                    <img src="/img/IF_ELSE_IF.png" class="img-fluid" alt="gambaran percabangan if else">
+                    <p>
+                            IF-ELSE bisa dianologikan dengan "jika memenuhi kondisi, lakukan A. jika tidak, lakukan B"
+                            <br>
+                            Jika di buat dalam kode C++, kondisi ini bisa dibuat menjadi : <br>
+                                    <pre>
+                                        #include < iostream >
+                                        using namespace std;
+                                                        
+                                        int main() {
+                                            int i = 5;
+                                                            
+                                            if (i == 3){
+                                                cout << "ini adalah angka tujuh";
+                                            }else if (i > 5){
+                                                cout<< "angka ini lebih besar dari lima";
+                                            }else{
+                                                cout<<"angka ini lebih kecil dari lima";
+                                            }
+                                        return 0;
+                                        }
+                                    </pre>   
+                            <br>
+                            Jika dijalankan, program itu akan menghasilkan output :
+                                    <pre>
+                                        angka ini lebih kecil dari lima
+                                    </pre>   
+                        </p>
+                '
         ]);
     }
 }

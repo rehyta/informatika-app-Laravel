@@ -40,19 +40,21 @@
 <body>
 
     <div class="container mt-5">
-
-        <div class="row">
-            <div class="col" id="left">
-                <img src="{{ URL('img\welcome-page.png') }}" alt="Web Informatika logo">
+       
+            <div class="col1" id="left">
+                <div class="d-flex justify-content-center">
+                    <img src="{{ URL('img\welcome-page.png') }}" class="img-fluid" style="width: 50%;" alt="Web Informatika logo">
+                </div>
+                
             </div>
 
-            <div class="col" id="right" style="padding-top:25vh">
-                <div class="header">
+            <div class="col2" id="right">
+                <div class="header text-center">
                     <h1><b>Selamat datang</b></h1>
                     <h1 style="font-size: 25px">di media belajar pemrograman dasar</h1>
                     <p>Belajar <i>ngoding</i> dimanapun dan kapanpun, dilengkapi dengan tutorial dan live code yang mudah dipahami</p>
                 </div>
-                <div class="d-grid m-5 d-md-block col-6 mx-auto">
+                <div class="d-grid gap-2 d-md-flex justify-content-center">
                     <a class="btn-link"  href="/login">
                         <button class="btn" >Login</button>
                     </a>
@@ -61,7 +63,7 @@
                     </a>
                 </div>
             </div>
-        </div>
+       
     </div>
 
 

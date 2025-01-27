@@ -43,10 +43,14 @@
           
               <button class="btn w-100" type="submit">Login</button>
             </form>
-            <small class="d-block text-center mt-3">Not Registered? <a href="/register">Register Now</a></small>
+            <div class="text-center mt-3">
+              <a href="{{ route('password.request') }}" class="text-decoration-none" style="color: #ee4872; font-size: 14px;">Lupa Password?</a>
+            </div>
+            <small class="d-block text-center mt-3" >Not Registered? <a href="/register" style="color: #ee4872; font-size: 14px;">Register Now</a></small>
             <p class="mt-5 mb-3 text-body-secondary">&copy; Rehyta</p>
         </main>
     </div>
+    
 </div>
 
 @endsection

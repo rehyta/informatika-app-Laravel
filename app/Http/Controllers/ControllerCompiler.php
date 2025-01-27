@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Http;
 Use App\Models\Livecode;
 Use App\Models\Course;
 Use App\Models\Process;
+use App\Models\Pretest;
 
 class ControllerCompiler extends Controller
 {
@@ -140,6 +141,46 @@ class ControllerCompiler extends Controller
 
         
 
+    }
 
+    public function savetest(Request $request)
+    {
+        $request->validate([
+            'input' => 'required',
+            'output' => 'required',
+        ]);
+    
+        $inputValue = $request->input('input');
+    
+        $files = [
+            'name' => 'main.cpp',
+            'content' => $inputValue
+        ];
+    
+        $accessToken = '2087b5bd-61bd-4c36-96f0-030e1f84b630';
+    
+        $response = Http::withHeaders([
+            'Authorization' => 'Token ' . $accessToken,
+            'Content-type' => 'Application/json',
+        ])->post('https://glot.io/api/run/cpp/latest', [
+            'files' => [$files],
+        ]);
+    
+        $outputValue = $response->json();
+        $stdout = $outputValue['stdout'];
+        $stderr = $outputValue['stderr'];
+    
+        if ($stderr == "") {
+            // Menyimpan input dan output ke tabel pretest
+            $pretest = Pretest::create([
+                'user_id' => auth()->user()->id,
+                'input' => $inputValue,
+                'output' => $stdout
+            ]);
+    
+            return response()->json(['output' => $stdout]);
+        }
+    
+        return response()->json(['error' => 'Execution error'], 400);
     }
 }

@@ -17,6 +17,22 @@
 .btn:hover{
   background-color: #fdad42;
 }
+
+.btn2{
+    background-color: #fdad42;
+    color: white;
+    width: 150px;
+    height: 70px;
+  }
+.btn2:hover{
+    background-color: white;
+    color: #ee4867;
+  }
+
+img{
+    width: min-content;
+    height: min-content;
+}
 article{
   position: static;
   display: flex;
@@ -66,6 +82,12 @@ article{
 }
 span:hover{
     color: rgba(255, 27, 27, 0.916);
+}
+pre{
+    max-width: 100%;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    background-color: rgb(230, 230, 230);
 }
 #content {
     height: 2000px;

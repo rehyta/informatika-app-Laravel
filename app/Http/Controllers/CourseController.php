@@ -59,6 +59,13 @@ class CourseController extends Controller
 
     }
 
+    public function test()
+    {
+        return view('pretest.pretest',[
+            "title" => 'Pre-test',
+        ]);
+    }
+
 
 
 }
